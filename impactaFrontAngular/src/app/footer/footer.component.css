@@ -1,0 +1,33 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-green);  
+    height: 60px;
+    width: 100vw;
+      
+    font-size: 24px;
+}
+
+.sobre-nos{
+    padding: 0px 12px;
+    border-right: 1px solid white;
+   
+}
+
+.contato{
+    padding: 0px 12px;
+    
+}
+
+.footer a{
+    font-size: 24px;
+    color: #FFF; 
+    text-decoration: none;
+}
+
+
+
+

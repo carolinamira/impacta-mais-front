@@ -1,0 +1,48 @@
+.bg-navbar{
+    background-color: var(--primary-green);  
+    color: #FFF;
+    height: 90px;
+    font-size: 24px;
+}
+
+.botoes-menu{
+    margin: 0px 18px;
+}
+
+.icon-navbar{
+    background-image: url('../../assets/icons/logo-branco.png');
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 12px;
+}
+
+.icon-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    width: 40px;
+    height: 40px;
+    
+    background-color: #fff;
+    border-radius: 6px;
+    margin-right: 6px;
+    
+}   
+
+.icon-search-in{
+    background-image: url('../../assets/icons/lupa.png');
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 6px;
+  
+}   

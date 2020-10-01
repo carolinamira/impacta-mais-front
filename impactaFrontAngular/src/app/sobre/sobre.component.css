@@ -1,0 +1,54 @@
+/* .sobre-nos{
+    position: relative;
+    top: 150px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+} */
+
+.container-sobre {
+    position: relative;
+    top: 90px;
+}
+
+.video{
+    position: relative;
+    top:90px;
+   
+}
+
+.video-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-nosso{
+    
+    height: 70vh;
+    border: 2px solid red;
+
+}
+
+.carousel-generation{
+    position: relative;
+    top:90px;
+    height: 600px;
+ 
+}
+
+.cor-botao{
+    background-color: brown;
+}
+
+.carousel-control-prev-icon[_ngcontent-vaq-c53]:after {
+    content: "<";
+    font-size: 40px;
+    color: grey;
+}
+
+.carousel-control-next-icon[_ngcontent-vaq-c53]:after {
+    content: ">";
+    font-size: 40px;
+    color: grey;
+}

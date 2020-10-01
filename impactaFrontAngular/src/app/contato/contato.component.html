@@ -1,0 +1,48 @@
+<div class="container  cont-contato my-5">
+    <div class="row ">
+      <div class="col-12 d-flex flex-column justify-content-center align-items-center ">
+          <h1 text-center>shdasiuhdsa</h1>
+          <p text-center text-justify>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo beatae sapiente debitis praesentium ducimus, quas hic vel facilis quos ut placeat commodi rem alias porro magni aliquid! Adipisci, totam nihil.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container  cont-contato my-5">
+    <div class="row ">
+      <div class="col-12 ">
+  
+       
+          <div class="container">
+            <div class="row justify-content-md-center align-items-center m-3">
+              <div class="col-md-auto">
+                <h1 class="display-4">Contato</h1>
+                <form>
+                  <label for="nome">Nome:</label>
+                  <br>
+                  <input type="text" id="nome" onkeyup="validaNome()">
+                  <div id="txtNome"></div>
+                  <br>
+                  <label for="email">E-mail:</label>
+                  <br>
+                  <input type="email" id="email" onkeyup="validaEmail()" />
+                  <div id="txtEmail"></div>
+                  <br>
+                  
+                  <div id="txtRad"></div>
+                  <br>
+                  <label>Mensagem:</label>
+                  <br>
+                  <textarea id="msg" cols="45" rows="7" onkeyup="validaMensagem()"></textarea>
+                  <div id="txtMsg"></div>
+                  <br>
+                  <input type="reset" name="botao_apagar" onclick="apagar()" value="Apagar" />
+                  <input type="button" id="enviar" name="botao_enviar" value="Enviar" />
+                </form>
+              </div>
+            </div>
+  
+          </div>
+        
+      </div>
+  

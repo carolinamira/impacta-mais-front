@@ -1,0 +1,10 @@
+:root {
+    --primary-red: #A30A08;
+    --secundary-red: #DE4D4D;
+    --primary-green: #00C580;
+    --secundary-green: #33FFB8;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
