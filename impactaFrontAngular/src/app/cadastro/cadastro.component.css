@@ -1,0 +1,11 @@
+.linkverdecadastro {
+    color: var(--primary-green);
+}
+
+.img-cadastro {
+    background-image: url("../../assets/img/img-cadastro.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
