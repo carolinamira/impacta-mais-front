@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "impactaFrontAngular"
+    }
+  },
+  "defaultProject": "impactaFrontAngular",
+  "cli": {
+    "analytics": "d96d88f5-8117-4bdf-acec-06cc5e0ae70d"
+  }
 }

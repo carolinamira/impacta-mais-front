@@ -2,44 +2,42 @@
 
 <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-navbar text-white">
 
-    <a routerLink="/home"><div class="icon-navbar"></div></a>
-    
-  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-  
+  <a routerLink="/home">
+    <div class="icon-navbar"></div>
+  </a>
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <div *ngIf='auth.btnSair()'>
         <li class="nav-item active">
-          <a class="nav-link text-white botoes-menu" href="#">Cadastrar <span class="sr-only">(current)</span></a>
+          <a class="nav-link text-white botoes-menu" (click)='sair()'>Sair<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white botoes-menu" href="#">Logar<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white botoes-menu" href="#">Bem vinde, Fulano de Tal<span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-  
-  
-  
-  
-      <form class="form-inline my-2 my-lg-0">
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-              <div class="icon-search">
-                <div class="icon-search-in"></div>
-              </div>
-            </a>
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      </form>
-  
-  
-  
-    </div>
-  </nav>
-  
-  <!-- / NAVBAR -->
-  
+      </div>
+      <li class="nav-item active">
+        <a class="nav-link text-white botoes-menu" href="#">Bem vinde, Fulano de Tal<span
+            class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <a href="http://" target="_blank" rel="noopener noreferrer">
+        <div class="icon-search">
+          <div class="icon-search-in"></div>
+        </div>
+      </a>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+
+
+
+  </div>
+</nav>
+
+<!-- / NAVBAR -->
