@@ -6,6 +6,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LogadoComponent } from './logado/logado.component';
+import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home' , pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'cadastro', component: CadastroComponent},
-  { path: 'logado', component: LogadoComponent}
+  { path: 'logado', component: LogadoComponent},
+  { path: 'feed', component: FeedComponent }
 
 ];
 
