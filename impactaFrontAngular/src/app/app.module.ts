@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { OrderModule} from 'ngx-order-pipe'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { LogadoComponent } from './logado/logado.component';
 import { FeedComponent } from './feed/feed.component';
+import { PostTemaComponent } from './post-tema/post-tema.component';
+import { DoacaoComponent } from './doacao/doacao.component';
+import { HospitalComponent } from './hospital/hospital.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +31,18 @@ import { FeedComponent } from './feed/feed.component';
     CadastroComponent,
     LoginComponent,
     LogadoComponent,
-    FeedComponent
+    FeedComponent,
+    PostTemaComponent,
+    DoacaoComponent,
+    HospitalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

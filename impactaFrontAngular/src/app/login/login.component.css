@@ -36,3 +36,20 @@
     border-radius: 20px 0px 0px 20px; 
     box-shadow: 5px 10px 30px #000;
 }
+
+.botao-login{
+    color:white;
+    background-color: var(--primary-green);
+    transition: ease-in-out 200ms;
+    border: none;
+    box-sizing: border-box;
+}
+
+.botao-login:hover{
+    opacity: 0.9;
+    background-color: #FFF;
+    color: var(--primary-green);
+    border: 1px solid black;
+ 
+    box-sizing: border-box;
+}

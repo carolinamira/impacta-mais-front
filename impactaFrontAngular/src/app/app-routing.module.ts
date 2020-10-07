@@ -7,6 +7,10 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LogadoComponent } from './logado/logado.component';
 import { FeedComponent } from './feed/feed.component';
+import { PostTemaComponent } from './post-tema/post-tema.component';
+import { DoacaoComponent } from './doacao/doacao.component';
+import { HospitalComponent } from './hospital/hospital.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home' , pathMatch: 'full' },
@@ -16,7 +20,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'cadastro', component: CadastroComponent},
   { path: 'logado', component: LogadoComponent},
-  { path: 'feed', component: FeedComponent }
+  { path: 'feed', component: FeedComponent },
+  { path: 'cadastro-tema', component: PostTemaComponent },
+  { path: 'doacao', component: DoacaoComponent },
+  { path: 'hospital', component: HospitalComponent }
+
+
 
 ];
 

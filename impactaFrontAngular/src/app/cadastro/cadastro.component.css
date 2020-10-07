@@ -2,19 +2,12 @@
     color: var(--primary-green);
 }
 
-/* .img-cadastro {
-    background-image: url("../../assets/img/img-cadastro.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-} */
-
 
 .container-teste{
     position: relative;
     top: 110px;
     height: 73vh;
+    box-sizing: border-box;
 }
 
 .row-teste{
@@ -37,7 +30,22 @@
     box-shadow: 5px 10px 30px #000;
 }
 
+.botao-cadastrar{
+    color:white;
+    background-color: var(--primary-green);
+    transition: ease-in-out 200ms;
+    border: none;
+    box-sizing: border-box;
+}
 
+.botao-cadastrar:hover{
+    opacity: 0.9;
+    background-color: #FFF;
+    color: var(--primary-green);
+    border: 1px solid black;
+ 
+    box-sizing: border-box;
+}
 
 
 
