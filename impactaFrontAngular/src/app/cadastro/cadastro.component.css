@@ -2,7 +2,6 @@
     color: var(--primary-green);
 }
 
-
 .container-teste{
     position: relative;
     top: 110px;
@@ -48,5 +47,11 @@
 }
 
 
+.img-cadastro {
+    background-image: url("../../assets/img/img-cadastro.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+}
 
