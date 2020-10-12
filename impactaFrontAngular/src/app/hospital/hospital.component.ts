@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Hospital } from '../model/hospital';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HospitalService } from '../service/hospital.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-hospital',
@@ -15,7 +16,9 @@ export class HospitalComponent implements OnInit {
 
   constructor(
     private hospitalService: HospitalService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
+
   ) { }
 
   ngOnInit() {
@@ -43,7 +46,7 @@ export class HospitalComponent implements OnInit {
       this.hospitalService.postHospital(this.hospital).subscribe((resp: Hospital) =>{
         this.hospital = resp        
         this.hospital = new Hospital()
-        alert('Hospital cadastrado com sucesso!')
+        this.alert.showAlertInfo('Hospital adicionado para análise!')
         this.findAllHospitals()
 
       })

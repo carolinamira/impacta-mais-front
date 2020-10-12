@@ -28,7 +28,7 @@
             <label class="" for="tema">Escolha um tema 
               
               
-              <!-- RETIRADO A OPCAO DE INSERIR NOVO TEMA, POIS A REGRA DE NEGOCIO DEFINE QUE O USUARIO NAO PODE CADASTRAR UM NOVO TEMA. -->
+              <!-- RETIRADO A OPCAO DE INSERIR NOVO TEMA, POIS A REGRA DE NEGOCIO DEFINE QUE O USUARIO NAO PODE CADASTRAR UM NOVO TEMA. TEMAS: ID1: Ajudei, ID2: Info, ID3: Pedido-->
 
               <!-- <a routerLink="/cadastro-tema">Cadastre um
                 novo</a> -->
@@ -111,15 +111,18 @@
                   <div class="row d-flex align-items-center 	">
                     <div class="col-md-8 ">
                       <h5 class="card-title"> {{item.titulo}} </h5>
-                      <small>Tema: {{item.tema.descricao}} </small>
+                      <small class="mr-3">{{item.tema.descricao}}</small>
+                            <small class="mx-3">{{item.cidade}}</small>
+                            <small class="mx-3">{{item.nome_hospital}}</small>
+                            <small class="mx-3"> <span style="color: var(--primary-red);">{{item.sangue}}</span> </small>
                     </div>
                     <div class="col-md-4 ">
 
-                      <button class="mr-3 btn btn-outline-info">
+                      <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
                         Editar
                       </button>
 
-                      <button class="mr-3 btn btn-outline-danger ml-3">
+                      <button class="mr-3 btn btn-outline-danger ml-3" [routerLink]="['/delete-post', item.id]">
                         Apagar
                       </button>
                     </div>

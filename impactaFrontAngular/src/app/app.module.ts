@@ -16,9 +16,14 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { LogadoComponent } from './logado/logado.component';
 import { FeedComponent } from './feed/feed.component';
-import { PostTemaComponent } from './post-tema/post-tema.component';
 import { DoacaoComponent } from './doacao/doacao.component';
 import { HospitalComponent } from './hospital/hospital.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { PutHospitalComponent } from './put-hospital/put-hospital.component';
+import { DeleteHospitalComponent } from './delete-hospital/delete-hospital.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -32,9 +37,13 @@ import { HospitalComponent } from './hospital/hospital.component';
     LoginComponent,
     LogadoComponent,
     FeedComponent,
-    PostTemaComponent,
     DoacaoComponent,
-    HospitalComponent
+    HospitalComponent,
+    PutPostagemComponent,
+    DeletePostagemComponent,
+    PutHospitalComponent,
+    DeleteHospitalComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +51,8 @@ import { HospitalComponent } from './hospital/hospital.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule, 
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

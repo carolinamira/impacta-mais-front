@@ -24,5 +24,13 @@ export class HospitalService {
     return this.http.post('http://localhost:8080/hospitais', hospital, this.token)
   }
 
+  putHospital(hospital: Hospital) {
+    return this.http.put('http://localhost:8080/hospitais', hospital, this.token)
+  }
+
+  deleteHospital(id: number){
+    return this.http.delete(`http://localhost:8080/hospitais/${id}`, this.token)
+  }
+
 }
 
