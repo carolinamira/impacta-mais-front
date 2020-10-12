@@ -1,3 +1,37 @@
+
+<div class="container  container-teste">
+    <div class="row  d-flex justify-content-center align-items-center row-teste">
+
+
+
+        <div class="col-md-4 bg-dark col-teste1"></div>
+
+
+
+        <div class="col-md-5 bg-light col-teste2 m-0 p-4">
+            
+
+        
+           
+                <div>
+                    <h3 class="text-center">Login</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Endereço de email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" [(ngModel)]='userLogin.email'>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" [(ngModel)]='userLogin.senha'>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-secondary w-25 botao-login" (click)='entrar()'>Entrar</button>
+                    </div>
+                </div>
+         
+        
+                <p class="text-center m-4">Ainda não possui cadastro?<a class="linkverdelogin" routerLink="/cadastro"> Cadastre-se aqui!</a> </p>
+
+
 <div class="container bg-dark mt-5 pt-5">
     <div class="row my-5 d-flex justify-content-md-center align-items-center bg-danger mt-5 pt-5">
         <div class="col-md-auto bg-primary mt-5 pt-5">
@@ -20,6 +54,7 @@
 
                 <p class="text-center">Não possui cadastro?<a class="linkverdelogin" routerLink="/cadastro"> Cadastre-se aqui!</a> </p>
             </div>
+
         </div>
     </div>
 </div>
