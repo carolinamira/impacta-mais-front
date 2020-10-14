@@ -1,8 +1,4 @@
 
-.container-sobre {
-    position: relative;
-    top: 90px;
-}
 
 .video{
     position: relative;
@@ -34,16 +30,27 @@
     background-color: brown;
 }
 
-.carousel-control-prev-icon[_ngcontent-vaq-c53]:after {
-    content: "<";
-    font-size: 40px;
-    color: grey;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+ 
+  background-size: 100%, 100%;
+
+  background-image: none;
 }
 
-.carousel-control-next-icon[_ngcontent-vaq-c53]:after {
-    content: ">";
-    font-size: 40px;
-    color: grey;
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rgb(189, 189, 189);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(189, 189, 189);
 }
 
 .linkedin, .github {

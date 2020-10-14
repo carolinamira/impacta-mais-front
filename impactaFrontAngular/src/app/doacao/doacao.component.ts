@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Postagem } from '../model/Postagem';
+import { Tema } from '../model/Tema';
+import { TemaService } from '../service/tema.service';
+import { PostagemService } from '../service/postagem.service';
 
 @Component({
   selector: 'app-doacao',
@@ -7,9 +11,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoacaoComponent implements OnInit {
 
-  constructor() { }
+  key = 'data_post'
+  reverse = true
+
+  postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
+
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
+  idTema: number
+
+  constructor(
+    private postagemService: PostagemService,
+    private temaService: TemaService
+  ) { }
 
   ngOnInit(): void {
+    window.scroll(0, 0)
+
+    this.findAllPostagens()
+    this.findAllTemas()
   }
+
+
+  findAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+    })
+  }
+
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
+
 
 }
