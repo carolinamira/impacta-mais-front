@@ -1,4 +1,4 @@
-.linkverdecadastro {
+/* .linkverdecadastro {
     color: var(--primary-green);
 }
 
@@ -32,8 +32,21 @@
 
 
 .td-link{
-    max-width: 50px ;
+    max-width: 150px ;
+    max-height: 30px;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
+.tr-css{
+    max-height: 30px !important;
+    overflow-y: hidden !important;
+} */
+
+
+
+.container-hospital{
+    top: 60px;
+
+}
 

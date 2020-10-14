@@ -8,17 +8,16 @@
 
 
       <!-- COLLAPSE -->
-      <p>
-        <a class="btn text-white w-50" style="background-color: var(--primary-green);display: inline-block;" data-toggle="collapse"
-          href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample ">
+      <p class="text-center">
+        <a class="btn text-white w-50" style="background-color: var(--primary-green);display: inline-block;"
+          data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+          aria-controls="collapseExample ">
           Faça uma nova publicação aqui
 
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             <div class="plus">
             </div>
-          </button>
-
-    
+          </button>     -->
 
         </a>
 
@@ -48,6 +47,25 @@
 
             <div class="col-md-6 ">
               <div class="form-group m-0">
+
+
+
+                <div class="d-flex justify-content-around align-items-center w-100">
+                  <div class="form-group mt-3">
+                    <label class="text" for="cidade">Cidade:</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Digite aqui sua cidade"
+                      [(ngModel)]='postagem.cidade'>
+                  </div>
+
+                  <div class="form-group mt-3">
+                    <label class="text" for="hospital">Hospital:</label>
+                    <input type="text" class="form-control" id="hospital" placeholder="Digite aqui seu hospital"
+                      [(ngModel)]='postagem.nome_hospital'>
+                  </div>
+                </div>
+
+
+
                 <label class="" for="tema">Escolha um tema
 
 
@@ -79,17 +97,6 @@
                 </select>
                 <!-- dropdown-sangue -->
 
-                <div class="form-group mt-3">
-                  <label class="text" for="cidade">Cidade:</label>
-                  <input type="text" class="form-control" id="cidade" placeholder="Digite aqui sua cidade"
-                    [(ngModel)]='postagem.cidade'>
-                </div>
-
-                <div class="form-group mt-3">
-                  <label class="text" for="hospital">Hospital:</label>
-                  <input type="text" class="form-control" id="hospital" placeholder="Digite aqui seu hospital"
-                    [(ngModel)]='postagem.nome_hospital'>
-                </div>
 
 
               </div>
@@ -154,7 +161,7 @@
               <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar">
             </div>
             <div class="col-md-2 pl-0">
-              <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+              <button class="btn btn-outline-info w-100" type="button">Pesquisar</button>
             </div>
           </div>
 
