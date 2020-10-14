@@ -7,76 +7,131 @@
 
 
 
-      <h2 class="text-center  "> <span style="color:cornflowerblue;">Sobre o que quer falar?</span></h2>
+      <!-- COLLAPSE -->
+      <p>
+        <a class="btn text-white w-50" style="background-color: var(--primary-green);display: inline-block;" data-toggle="collapse"
+          href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample ">
+          Faça uma nova publicação aqui
 
-      <div class="form-group">
-        <label class="text-" for="titulo">Título:</label>
-        <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
-          [(ngModel)]='postagem.titulo'>
-      </div>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <div class="plus">
+            </div>
+          </button>
 
-      <div class="form-group">
-        <label class="text-" for="texto">Texto:</label>
-        <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
-          [(ngModel)]='postagem.text_box'></textarea>
-      </div>
+    
 
-      <div class="row d-flex align-items-end ">
+        </a>
 
-        <div class="col-md-6 ">
-          <div class="form-group m-0">
-            <label class="" for="tema">Escolha um tema 
-              
-              
-              <!-- RETIRADO A OPCAO DE INSERIR NOVO TEMA, POIS A REGRA DE NEGOCIO DEFINE QUE O USUARIO NAO PODE CADASTRAR UM NOVO TEMA. TEMAS: ID1: Ajudei, ID2: Info, ID3: Pedido-->
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
 
-              <!-- <a routerLink="/cadastro-tema">Cadastre um
+
+
+          <!-- CONTEUDO-COLLAPSE -->
+
+
+
+          <div class="form-group">
+            <label class="text-" for="titulo">Título:</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
+              [(ngModel)]='postagem.titulo'>
+          </div>
+
+          <div class="form-group">
+            <label class="text-" for="texto">Texto:</label>
+            <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
+              [(ngModel)]='postagem.text_box'></textarea>
+          </div>
+
+          <div class="row d-flex align-items-end ">
+
+            <div class="col-md-6 ">
+              <div class="form-group m-0">
+                <label class="" for="tema">Escolha um tema
+
+
+                  <!-- RETIRADO A OPCAO DE INSERIR NOVO TEMA, POIS A REGRA DE NEGOCIO DEFINE QUE O USUARIO NAO PODE CADASTRAR UM NOVO TEMA. TEMAS: ID1: Ajudei, ID2: Info, ID3: Pedido-->
+
+                  <!-- <a routerLink="/cadastro-tema">Cadastre um
                 novo</a> -->
-              </label>
-            <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-              <option value="" disabled selected>Tema</option>
-              <option *ngFor='let item of listaTemas' value={{item.id}}>
-                {{item.descricao}}
-              </option>
-            </select>
+                </label>
+                <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option value="" disabled selected>Tema</option>
+                  <option *ngFor='let item of listaTemas' value={{item.id}}>
+                    {{item.descricao}}
+                  </option>
+                </select>
 
-            <!-- dropdown-sangue -->
-            <label class="mt-3" for="tema">Escolha um tipo sanguíneo</label>
-            <select id="tipo-sangue" name="sangue" class="form-control" [(ngModel)]='postagem.sangue'>
-              <option value="" disabled selected>Tipo sanguíneo</option>
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B-">B-</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
-              <option value="RH nulo">RH nulo</option>
-            </select>
-            <!-- dropdown-sangue -->
+                <!-- dropdown-sangue -->
+                <label class="mt-3" for="tema">Escolha um tipo sanguíneo</label>
+                <select id="tipo-sangue" name="sangue" class="form-control" [(ngModel)]='postagem.sangue'>
+                  <option value="" disabled selected>Tipo sanguíneo</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="RH nulo">RH nulo</option>
+                </select>
+                <!-- dropdown-sangue -->
 
-            <div class="form-group mt-3">
-              <label class="text" for="cidade">Cidade:</label>
-              <input type="text" class="form-control" id="cidade" placeholder="Digite aqui sua cidade"
-                [(ngModel)]='postagem.cidade'>
+                <div class="form-group mt-3">
+                  <label class="text" for="cidade">Cidade:</label>
+                  <input type="text" class="form-control" id="cidade" placeholder="Digite aqui sua cidade"
+                    [(ngModel)]='postagem.cidade'>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="text" for="hospital">Hospital:</label>
+                  <input type="text" class="form-control" id="hospital" placeholder="Digite aqui seu hospital"
+                    [(ngModel)]='postagem.nome_hospital'>
+                </div>
+
+
+              </div>
             </div>
 
-            <div class="form-group mt-3">
-              <label class="text" for="hospital">Hospital:</label>
-              <input type="text" class="form-control" id="hospital" placeholder="Digite aqui seu hospital"
-                [(ngModel)]='postagem.nome_hospital'>
+            <div class="col-md-6 d-flex justify-content-end ">
+              <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
             </div>
 
+          </div>
 
+          <!-- CONTEUDO-COLLAPSE -->
+
+        </div>
+      </div>
+
+      <!-- / COLLAPSE -->
+
+
+      <!--  COLLAPSE 2 -->
+
+      <!-- <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Faça uma nova publicação aqui
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 d-flex justify-content-end ">
-          <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
-        </div>
+      </div> -->
 
-      </div>
+      <!-- / COLLAPSE 2 -->
+
 
       <hr class="mt-5">
 
@@ -112,9 +167,9 @@
                     <div class="col-md-8 ">
                       <h5 class="card-title"> {{item.titulo}} </h5>
                       <small class="mr-3">{{item.tema.descricao}}</small>
-                            <small class="mx-3">{{item.cidade}}</small>
-                            <small class="mx-3">{{item.nome_hospital}}</small>
-                            <small class="mx-3"> <span style="color: var(--primary-red);">{{item.sangue}}</span> </small>
+                      <small class="mx-3">{{item.cidade}}</small>
+                      <small class="mx-3">{{item.nome_hospital}}</small>
+                      <small class="mx-3"> <span style="color: var(--primary-red);">{{item.sangue}}</span> </small>
                     </div>
                     <div class="col-md-4 ">
 

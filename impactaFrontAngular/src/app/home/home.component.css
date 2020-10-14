@@ -5,12 +5,21 @@
     height: 83vh;
 }
 
+.container-cards{
+    position: relative;
+    top: 150px;
+    
+    height: 83vh;
+}
+
 
 
 .col-home{
   
     height: 83vh;
 }
+
+
 
 
 .card-home{
@@ -40,4 +49,45 @@
     background-size: cover;
 }
 
+.home-carousel {
+    height: 100vh;
+}
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+ 
+  background-size: 100%, 100%;
+
+  background-image: none;
+}
+
+.carousel-control-next-icon[_ngcontent-vaq-c53]:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rgb(189, 189, 189);
+}
+
+.carousel-control-prev-icon[_ngcontent-vaq-c53]:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(189, 189, 189);
+}
+
+.carousel-control-next{
+    justify-content: flex-end !important;
+}
+
+.carousel-control-prev{
+    justify-content: flex-start !important;
+}
+
+.row-carousel{
+    height: 100vh;
+}
+
+.img-shadow{
+    box-shadow: 2px 2px 20px #000;
+}
