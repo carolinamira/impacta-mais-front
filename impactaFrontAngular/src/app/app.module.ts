@@ -27,6 +27,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { NavbarSangueComponent } from './navbar-sangue/navbar-sangue.component';
 import { FooterSangueComponent } from './footer-sangue/footer-sangue.component';
 import { ParceirosComponent } from './parceiros/parceiros.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { PutPerfilComponent } from './put-perfil/put-perfil.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ParceirosComponent } from './parceiros/parceiros.component';
     AlertasComponent,
     NavbarSangueComponent,
     FooterSangueComponent,
-    ParceirosComponent
+    ParceirosComponent,
+    PerfilComponent,
+    PutPerfilComponent
   ],
   imports: [
     BrowserModule,

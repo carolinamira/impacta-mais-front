@@ -14,6 +14,7 @@ import { PutHospitalComponent } from './put-hospital/put-hospital.component';
 import { DeleteHospitalComponent } from './delete-hospital/delete-hospital.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { ParceirosComponent } from './parceiros/parceiros.component';
+import { PutPerfilComponent } from './put-perfil/put-perfil.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'delete-post/:id', component: DeletePostagemComponent},
   { path: 'editar-hospital/:id', component: PutHospitalComponent},
   { path: 'delete-hospital/:id', component: DeleteHospitalComponent},
-  { path: 'parceiros', component: ParceirosComponent}
+  { path: 'parceiros', component: ParceirosComponent},
+  { path: 'editar-perfil', component: PutPerfilComponent }
 
 ];
 

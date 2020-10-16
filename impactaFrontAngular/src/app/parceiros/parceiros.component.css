@@ -1,3 +1,10 @@
 .cont-parceiros{
+    position: fixed;
+    top: 200px;
     height: 100vh;
+ 
+}
+
+.col{
+    height: auto;
 }

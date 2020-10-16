@@ -16,6 +16,7 @@ export class DoacaoComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  sangue: string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -45,7 +46,15 @@ export class DoacaoComponent implements OnInit {
       this.listaTemas = resp
     })
   }
-
+  // findBySanguePostagem(){
+  //   if (this.sangue === '') {
+  //     this.findAllPostagens()      
+  //   } else {
+  //     this.postagemService.getBySanguePostagem(this.sangue).subscribe((resp: Postagem[]) => {
+  //       this.listaPostagens = resp
+  //     })
+  //   }  
+  // }
 
   
 
