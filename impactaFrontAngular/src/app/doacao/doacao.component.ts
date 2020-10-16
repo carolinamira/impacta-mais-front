@@ -4,6 +4,7 @@ import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
 import { PostagemService } from '../service/postagem.service';
 import { AlertasService } from '../service/alertas.service';
+import { getAllStates, getAllCities, getStateCities } from "easy-location-br";
 
 @Component({
   selector: 'app-doacao',
@@ -11,6 +12,10 @@ import { AlertasService } from '../service/alertas.service';
   styleUrls: ['./doacao.component.css']
 })
 export class DoacaoComponent implements OnInit {
+
+  estados = []
+  estadoSelecao: string
+  cidades = []
 
   key = 'data_post'
   reverse = true
@@ -35,6 +40,8 @@ export class DoacaoComponent implements OnInit {
 
     this.findAllPostagens()
     this.findAllTemas()
+
+    this.estados = getAllStates()
   }
 
 
@@ -56,6 +63,7 @@ export class DoacaoComponent implements OnInit {
     } else {
       this.postagemService.getBySanguePostagem(this.sangue).subscribe((resp: Postagem[]) => {
         this.listaPostagens = resp
+        window.scroll(0, 800)
       })
     }  
   }
@@ -66,8 +74,14 @@ export class DoacaoComponent implements OnInit {
     } else {
       this.postagemService.getByCidadePostagem(this.cidade).subscribe((resp: Postagem[]) => {
         this.listaPostagens = resp
+        window.scroll(0, 900)
       })
     }  
+  }
+
+  estadoSelecionado(event:any) {
+    this.estadoSelecao=event.target.value
+    this.cidades = getStateCities(this.estadoSelecao)
   }
 
   // findBySangueECidade(){

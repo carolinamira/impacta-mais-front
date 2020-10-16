@@ -66,6 +66,7 @@ export class FeedComponent implements OnInit {
         this.postagem = new Postagem()
         this.alert.showAlertSuccess('Postagem realizada com sucesso!')
         this.findAllPostagens()
+        window.scroll(0, 725)
       })
     }
   }
