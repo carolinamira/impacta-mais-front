@@ -13,6 +13,7 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { PutHospitalComponent } from './put-hospital/put-hospital.component';
 import { DeleteHospitalComponent } from './delete-hospital/delete-hospital.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { ParceirosComponent } from './parceiros/parceiros.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'editar-post/:id', component: PutPostagemComponent},
   { path: 'delete-post/:id', component: DeletePostagemComponent},
   { path: 'editar-hospital/:id', component: PutHospitalComponent},
-  { path: 'delete-hospital/:id', component: DeleteHospitalComponent}
+  { path: 'delete-hospital/:id', component: DeleteHospitalComponent},
+  { path: 'parceiros', component: ParceirosComponent}
 
 ];
 

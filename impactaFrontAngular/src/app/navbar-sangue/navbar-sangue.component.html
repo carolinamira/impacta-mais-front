@@ -50,6 +50,12 @@
             <a class="nav-link text-white botoes-menu" routerLink="/hospital">Buscar hospital<span class="sr-only">(current)</span></a>
           </li>
         </div>
+
+        <div *ngIf='auth.btnSair()'>
+          <li class="nav-item active">
+            <a class="nav-link text-white botoes-menu" routerLink="/parceiros">Parcerias e pontos<span class="sr-only">(current)</span></a>
+          </li>
+        </div>
   
   
         <div *ngIf='auth.btnSair()'>

@@ -42,5 +42,8 @@ export class PutHospitalComponent implements OnInit {
       this.hospital = resp})
   }
 
-
+  btnCancelar(){
+    this.router.navigate(['/hospital'])
+  }
+  
 }

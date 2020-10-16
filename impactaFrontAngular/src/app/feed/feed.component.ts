@@ -43,6 +43,11 @@ export class FeedComponent implements OnInit {
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
+    }, err => {
+      if (err.status == '500' || err.status == '400'  || err.status == '402' ){
+        this.alert.showAlertDanger("Preencha todos os campos corretamente para prosseguir!")
+      }
+
     })
   }
 
@@ -68,6 +73,11 @@ export class FeedComponent implements OnInit {
   findAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
+    }, err => {
+      if (err.status == '500' || err.status == '400'  || err.status == '402' ){
+        this.alert.showAlertDanger("Preencha todos os campos corretamente para prosseguir!")
+      }
+
     })
   }
 
