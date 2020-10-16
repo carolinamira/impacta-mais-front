@@ -1,19 +1,21 @@
+<!--navbar verde-->
+<app-navbar></app-navbar>
+<!--/navbar verde-->
+
 <div class="jumbotron jumbotron-fluid mt-5 mb-0 py-4 ">
   <div class="container">
     <h3 class=" text-center my-3">Contate-nos</h3>
-    <p style="font-size: 16px;" class="lead text-justify">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolor voluptatum porro, aspernatur eveniet
-      blanditiis atque! Officia dicta labore possimus necessitatibus consectetur, obcaecati optio facilis perferendis,
-      nemo incidunt minima autem.
+    <p style="font-size: 16px;" class="lead text-justify text-center">
+      Enive sua mensagem, sugestão ou comentário, e logo entraremos em contato! :)
 
     </p>
   </div>
 </div>
 
 
-<div class="container my-5 w-50">
-  <div class="row mb-5">
-    <div class="col-12 mb-5">
+<div class="container-fluid my-5 ">
+  <div class="row w-100  d-flex justify-content-center align-items-center">
+    <div class="col-5 mb-5 ">
 
       <form>
         <div class="form-group">
@@ -32,8 +34,29 @@
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn botao-enviar" (click)='enviar()'>Enviar</button>
       </form>
+
+
+    </div>
+
+    <div class="col-5 mb-5 d-flex justify-content-center align-items-center flex-column">
+
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.135308231241!2d-46.683385885188365!3d-23.56358338468178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce579d45a95e2d%3A0x73c42dcfc196cc70!2sR.%20C%C3%B4nego%20Eug%C3%AAnio%20Leite%2C%20623%20-%203%C2%BA%20andar%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005414-011!5e0!3m2!1spt-BR!2sbr!4v1602767634546!5m2!1spt-BR!2sbr"
+        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+
+      <div class="col-5 mt-2 d-flex justify-content-center align-items-center">
+        <a href="https://www.instagram.com/impacta_mais/" target="_blank" rel="noopener noreferrer">
+          <div id="instagram" class="instagram mt-4"></div>
+        </a>
+
+        <a class="contact-email" href="mailto:generation.pi.06@gmail.com?subject=Contato&body=Olá, tudo bem? ..." >
+          <div id="email" class="email mt-4"></div>
+        </a>
+      </div>
 
 
     </div>
@@ -41,3 +64,8 @@
   </div>
 
 </div>
+
+<!--footer verde-->
+<app-footer></app-footer>
+<!--/footer verde-->
+

@@ -1,0 +1,85 @@
+.bg-navbar{
+    background-color: var(--primary-red);  
+    color: #FFF !important;
+    height: 60px;
+    font-size: 18px;
+}
+
+.botoes-menu{
+    margin: 0px 8px;
+}
+
+.icon-navbar{
+    background-image: url('../../assets/icons/logo-branco.png');
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 12px;
+}
+
+.icon-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    width: 40px;
+    height: 40px;
+    
+    background-color: #fff;
+    border-radius: 6px;
+    margin-right: 6px;
+    
+}   
+
+.icon-search-in{
+    background-image: url('../../assets/icons/lupa.png');
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 6px;  
+} 
+
+.botao-sair{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+.botao-cadastrar{
+    position: fixed;
+    top: 10px;
+    right: 90px;
+    /* margin-right: 30px; */
+    /* border-right: 1px solid white; */
+    color: #FFF
+}
+
+.botao-login{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    color: #FFF
+}
+
+.botao-login a, .botao-cadastrar a{
+    color: #FFF
+}
+
+.nav-link{
+    color: #FFF
+}
+
+.div-cadastro{
+    display: block;
+    border-right: 1px solid white;
+    
+    padding: 0px 12px;
+    
+}

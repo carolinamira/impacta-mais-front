@@ -62,5 +62,9 @@ export class PutPostagemComponent implements OnInit {
       this.postagem = resp
     })
   }
+
+  btnCancelar(){
+    this.router.navigate(['/feed'])
+  }
   
 }

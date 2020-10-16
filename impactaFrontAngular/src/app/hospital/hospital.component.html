@@ -1,66 +1,105 @@
-
+<!--navbar vermelho-->
+<app-navbar-sangue></app-navbar-sangue>
+<!-- /navbar vermelho-->
 
 
 <div class="jumbotron jumbotron-fluid mt-5 mb-0 py-4 ">
   <div class="container">
     <h3 class=" text-center my-3">Cadastro de um novo hospital</h3>
-    <p style="font-size: 16px;" class="lead text-justify">Com o compartilhamento de informações e uma atitude colaborativa construiremos uma rede cada vez mais completa! 
-      Se você não encontrou um hospital/ponto de doação de sangue na nossa lista, por gentileza preencha o formulário para cadastrar; nossa equipe realizará a análise do cadastro e a confirmação de que o local se encontra ativo e recebendo doações.</p>
+    <p style="font-size: 16px;" class="lead text-justify">Com o compartilhamento de informações e uma atitude
+      colaborativa construiremos uma rede cada vez mais completa! <br>
+      Se você não encontrou um hospital/ponto de doação de sangue na nossa lista, por gentileza preencha o formulário
+      para cadastrar; nossa equipe realizará a análise do cadastro e a confirmação de que o local se encontra ativo e
+      recebendo doações.</p>
   </div>
 </div>
 
 
-<!-- CONTAINER 1 -->
+<!-- COLLAPSE -->
+<p class="text-center">
+  <a class="btn text-white w-25 mt-3" style="background-color: var(--primary-red);display: inline-block;"
+    data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample ">
+    Cadastre um novo hospital aqui
 
-<div class="container container-hospital mt-3">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-md-6">
+    <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <div class="plus">
+        </div>
+      </button>     -->
+
+  </a>
+
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
 
 
-      <!-- <h3 class="text-center mb-4 ">Cadastro de um novo hospital</h3>
+
+    <!-- CONTEUDO-COLLAPSE -->
+
+
+    <!-- CONTAINER 1 -->
+
+    <div class="container container-hospital mt-3">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+
+
+          <!-- <h3 class="text-center mb-4 ">Cadastro de um novo hospital</h3>
       <p class="my-3">Com o compartilhamento de informações e uma atitude colaborativa construiremos uma rede cada vez mais completa! 
         Se você não encontrou um hospital/ponto de doação de sangue na nossa lista, por gentileza preencha o formulário para cadastrar; nossa equipe realizará a análise do cadastro e a confirmação de que o local se encontra ativo e recebendo doações.</p> -->
 
-      <div class="form-group">
-        <label class="" for="texto">Nome do hospital:</label>
-        <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o nome do hospital"
-          [(ngModel)]='hospital.nome'>
-      </div>
-
-      
-      <div class="form-group">
-        <label class="" for="texto">Cidade:</label>
-        <input class="form-control" id="texto" rows="3" placeholder="Digite aqui a cidade do hospital"
-          [(ngModel)]='hospital.cidade'>
-      </div>
-
-      
-      <div class="form-group">
-        <label class="" for="texto">Endereço:</label>
-        <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o endereço do hospital"
-          [(ngModel)]='hospital.endereco'>
-      </div>
-
-      
-      <div class="form-group">
-        <label class="" for="texto">Link do Google Maps:</label>
-        <input class="form-control" id="texto" rows="3" placeholder="https://www.google.com.br/maps/..."
-          [(ngModel)]='hospital.link'>
-      </div>
+          <div class="form-group">
+            <label class="" for="texto">Nome do hospital:</label>
+            <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o nome do hospital"
+              [(ngModel)]='hospital.nome'>
+          </div>
 
 
-      <div class="row mb-5">
-        <div class="col-md-12 d-flex justify-content-center">
-          <button class="btn btn-outline-success w-25 my-3 mb-2" (click)='cadastrar()'>Cadastrar</button>
+          <div class="form-group">
+            <label class="" for="texto">Cidade:</label>
+            <input class="form-control" id="texto" rows="3" placeholder="Digite aqui a cidade do hospital"
+              [(ngModel)]='hospital.cidade'>
+          </div>
+
+
+          <div class="form-group">
+            <label class="" for="texto">Endereço:</label>
+            <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o endereço do hospital"
+              [(ngModel)]='hospital.endereco'>
+          </div>
+
+
+          <div class="form-group">
+            <label class="" for="texto">Link do Google Maps:</label>
+            <input class="form-control" id="texto" rows="3" placeholder="https://www.google.com.br/maps/..."
+              [(ngModel)]='hospital.link'>
+          </div>
+
+
+          <div class="row mb-5">
+            <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn w-25 my-3 text-white mb-2" style="background-color: var(--primary-red);"
+                (click)='cadastrar()'>Cadastrar</button>
+            </div>
+          </div>
+
+
         </div>
       </div>
-
-
     </div>
+
+    <!-- CONTAINER 1 -->
+
+    <!-- CONTEUDO-COLLAPSE -->
+
   </div>
 </div>
 
-<!-- CONTAINER 1 -->
+<!-- / COLLAPSE -->
+
+
+
+
 
 
 
@@ -70,7 +109,9 @@
 <div class="jumbotron jumbotron-fluid  mb-0 py-4 ">
   <div class="container">
     <h3 class=" text-center my-3">Lista de hospitais</h3>
-    <p style="font-size: 16px;" class="lead">Encontre na lista abaixo os hospitais/pontos de doação de sangue mais próximos da sua localização através do link do Google Maps. Os locais com a classificação "ativo" estão recebendo doações, e os locais "em análise" estão sendo verificados por nossa equipe</p>
+    <p style="font-size: 16px;" class="lead">Encontre na lista abaixo os hospitais/pontos de doação de sangue mais
+      próximos da sua localização através do link do Google Maps. Os locais com a classificação "ativo" estão recebendo
+      doações, e os locais "em análise" estão sendo verificados por nossa equipe</p>
   </div>
 </div>
 
@@ -90,8 +131,8 @@
             <th scope="col">Endereço</th>
             <th scope="col">Google Maps</th>
             <th scope="col">Em Análise</th>
-         
-            
+
+
           </tr>
         </thead>
         <tbody>
@@ -106,7 +147,7 @@
               <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-hospital', item.id]">Editar</a>
               <a class="btn btn-outline-danger" [routerLink]="['/delete-hospital', item.id]">Apagar</a>
             </td>
-            
+
           </tr>
 
         </tbody>
@@ -118,3 +159,8 @@
 </div>
 
 <!-- CONTAINER 2 -->
+
+
+<!--footer vermelho-->
+<app-footer-sangue></app-footer-sangue>
+<!--/footer vermelho-->

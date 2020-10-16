@@ -1,1 +1,39 @@
 
+.instagram, .email {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 12px ;
+}
+
+#instagram{
+    background-image: url('../../assets/img/instagram_original.png');
+}
+
+#instagram:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
+#email{
+    background-image: url('../../assets/img/email.png');
+}
+
+#email:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.botao-enviar{
+    background-color: var(--primary-green);
+    color: white;
+    transition: ease 300ms;
+}
+
+.botao-enviar:hover{
+    border: 1px solid black;
+    opacity: 0.9;
+}

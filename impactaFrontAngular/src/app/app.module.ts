@@ -24,6 +24,8 @@ import { PutHospitalComponent } from './put-hospital/put-hospital.component';
 import { DeleteHospitalComponent } from './delete-hospital/delete-hospital.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NavbarSangueComponent } from './navbar-sangue/navbar-sangue.component';
+import { FooterSangueComponent } from './footer-sangue/footer-sangue.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     DeletePostagemComponent,
     PutHospitalComponent,
     DeleteHospitalComponent,
-    AlertasComponent
+    AlertasComponent,
+    NavbarSangueComponent,
+    FooterSangueComponent
   ],
   imports: [
     BrowserModule,

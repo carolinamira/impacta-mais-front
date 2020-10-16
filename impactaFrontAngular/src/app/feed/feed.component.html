@@ -1,3 +1,8 @@
+<!--navbar vermelho-->
+<app-navbar-sangue></app-navbar-sangue>
+<!-- /navbar vermelho-->
+
+
 <div id="feed" class="container-fluid py-5 cont-feed mb-5 ">
 
   <div class="row  d-flex justify-content-center align-items-center mb-5 bg-white mt-3 ">
@@ -7,18 +12,12 @@
 
 
 
-       <!-- COLLAPSE -->
+      <!-- COLLAPSE -->
       <p class="text-center">
-        <a class="btn text-white w-50" style="background-color: var(--primary-green);display: inline-block;"
+        <a class="btn text-white w-50" style="background-color: var(--primary-red);display: inline-block;"
           data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
           aria-controls="collapseExample ">
           Faça uma nova publicação aqui
-
-          <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <div class="plus">
-            </div>
-          </button>     -->
-
         </a>
 
       </p>
@@ -32,15 +31,21 @@
 
 
           <div class="form-group">
-            <label class="text-" for="titulo">Título:</label>
+            <label class="" for="titulo">Título:</label>
             <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
               [(ngModel)]='postagem.titulo'>
           </div>
 
           <div class="form-group">
-            <label class="text-" for="texto">Texto:</label>
+            <label class="" for="texto">Texto:</label>
             <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto"
               [(ngModel)]='postagem.text_box'></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="" for="imagem">Imagem:</label>
+            <input type="text" class="form-control" id="imagem"
+              placeholder="Entre com o link da sua imagem => https://www..." [(ngModel)]='postagem.imagem'>
           </div>
 
           <div class="row d-flex align-items-end ">
@@ -82,7 +87,7 @@
 
 
                         <!-- RETIRADO A OPCAO DE INSERIR NOVO TEMA, POIS A REGRA DE NEGOCIO DEFINE QUE O USUARIO NAO PODE CADASTRAR UM NOVO TEMA. TEMAS: ID1: Ajudei, ID2: Info, ID3: Pedido-->
-      
+
                         <!-- <a routerLink="/cadastro-tema">Cadastre um
                       novo</a> -->
                       </label>
@@ -152,7 +157,7 @@
       <nav class="d-flex justify-content-center ">
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
-            href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
+            href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Postagens</a>
 
           <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
             href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por tema</a>
@@ -165,10 +170,12 @@
           aria-labelledby="nav-postagens-tab">
           <div class="row mt-3 mb-3">
             <div class="col-md-10 pr-0">
-              <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar">
+              <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar"
+                [(ngModel)]='titulo'>
             </div>
             <div class="col-md-2 pl-0">
-              <button class="btn btn-outline-info w-100" type="button">Pesquisar</button>
+              <button class="btn btn-outline-info w-100" type="button"
+                (click)='findByTituloPostagem()'>Pesquisar</button>
             </div>
           </div>
 
@@ -179,13 +186,19 @@
                 <div class="card-header">
                   <div class="row d-flex align-items-center 	">
                     <div class="col-md-8 ">
+
                       <h5 class="card-title"> {{item.titulo}} </h5>
+
                       <small class="mr-3">{{item.tema.descricao}}</small>
                       <small class="mx-3">{{item.cidade}}</small>
                       <small class="mx-3">{{item.nome_hospital}}</small>
+
                       <small class="mx-3"> <span style="color: var(--primary-red);">{{item.sangue}}</span> </small>
                     </div>
-                    <div class="col-md-4 ">
+
+
+
+                    <div class="col-md-4">
 
                       <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">
                         Editar
@@ -195,12 +208,19 @@
                         Apagar
                       </button>
                     </div>
+
+
+
+
+
+
                   </div>
                 </div>
 
 
                 <div class="card-body ">
-                  <p class="card-text" aria-describedby="texto"> {{item.text_box}} </p>
+                  <div class="imagem"><img class="imagem" src="{{item.imagem}}" alt=""></div>
+                  <p class="card-text mt-3" aria-describedby="texto"> {{item.text_box}} </p>
                   <small id="texto" class="form-text m-0 text-muted mb-3 ">
                     Postado em {{item.data_post | date: 'dd/MM/yyyy '}} às {{item.data_post | date: 'HH:mm'}} </small>
                 </div>
@@ -210,18 +230,64 @@
           </div>
         </div>
 
-        <div class="tab-pane fade" id="postagens-temas" role="tabpanel" aria-labelledby="nav-presenca-tab">
+
+
+
+
+
+
+
+
+
+
+
+        <div class="tab-pane fade show" id="postagens-temas" role="tabpanel" aria-labelledby="nav-presenca-tab">
           <div class="row mt-3 mb-3">
             <div class="col-md-10 pr-0">
-              <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar">
+              <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar"
+                [(ngModel)]='nomeTema'>
             </div>
             <div class="col-md-2 pl-0">
-              <button class="btn btn-outline-info w-100" type="button">Pesquisar</button>
+              <button class="btn btn-outline-info w-100" type="button" (click)='findByNomeTema()'>Pesquisar</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12" *ngFor='let item of listaTemas | orderBy: key : reverse'>
+              <div *ngFor='let post of item.postagem'>
+                <div class="card mt-5 mb-5">
+                  <div class="card-header">
+                    <div class="row d-flex align-items-center">
+                      <div class="col-md-12">
+                        <h5 class="card-title">{{post.titulo}}</h5>
+                        <!-- <small class="mr-3">{{item.tema.descricao}}</small> -->
+                        <small class="mx-3">{{post.cidade}}</small>
+                        <small class="mx-3">{{post.nome_hospital}}</small>
+                        <small class="mx-3"> <span style="color: var(--primary-red);">{{post.sangue}}</span> </small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="imagem"><img class="imagem" src="{{item.imagem}}" alt=""></div>
+                    <p class="card-text" aria-describedby="texto">{{post.text_box}}</p>
+                    <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">Postado em:
+                      {{post.data_post | date: 'dd/MM/yyyy'}} às {{post.data_post | date: 'HH:mm'}}</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
+
+<!-- Final da tab "Postagens Temas" -->
+
+
+
+
+<!--footer vermelho-->
+<app-footer-sangue></app-footer-sangue>
+<!--/footer vermelho-->

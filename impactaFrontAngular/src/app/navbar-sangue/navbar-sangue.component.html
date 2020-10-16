@@ -1,0 +1,72 @@
+<!-- NAVBAR -->
+
+<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-navbar text-white">
+
+    <a routerLink="/home">
+      <div class="icon-navbar"></div>
+    </a>
+  
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav mr-auto">
+  
+  
+        <div *ngIf='auth.btnLogin()'>
+          <li class="nav-item active botao-cadastrar text-white div-cadastro">
+            <a class="nav-link text-white" routerLink="/cadastro">Cadastrar <span class="sr-only">(current)</span></a>
+          </li>
+        </div>
+  
+        <div *ngIf='auth.btnLogin()'>
+          <li class="nav-item active botao-login">
+            <a class="nav-link text-white" routerLink="/login">Login <span class="sr-only">(current)</span></a>
+          </li>
+        </div>
+  
+  
+  
+        <div *ngIf='auth.btnSair()'>
+          <li class="nav-item active">
+            <a class="nav-link text-white botoes-menu" routerLink="/feed">Feed<span class="sr-only">(current)</span></a>
+          </li>
+        </div>
+  
+  
+        <div *ngIf='auth.btnSair()'>
+          <li class="nav-item active">
+            <a class="nav-link text-white botoes-menu" routerLink="/doacao">Doação<span class="sr-only">(current)</span></a>
+          </li>
+        </div>
+  
+  
+        <div *ngIf='auth.btnSair()'>
+          <li class="nav-item active">
+            <a class="nav-link text-white botoes-menu" routerLink="/hospital">Buscar hospital<span class="sr-only">(current)</span></a>
+          </li>
+        </div>
+  
+  
+        <div *ngIf='auth.btnSair()'>
+          <li class="nav-item active">
+            <a class="nav-link text-white botoes-menu botao-sair" (click)='sair()'>Sair<span class="sr-only">(current)</span></a>
+          </li>
+        </div>
+  
+  
+  
+      </ul>
+  
+  
+  
+  
+  
+    </div>
+  </nav>
+  
+  <!-- / NAVBAR -->
