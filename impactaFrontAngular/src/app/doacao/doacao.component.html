@@ -75,6 +75,10 @@
           <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findBySanguePostagem()'>Buscar por sangue</button>
           <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findByCidadePostagem()'>Buscar por cidade</button>
           <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findAllPostagens()'>Ver todas as postagens</button>
+
+
+          <!-- <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findBySangueECidade()'>Buscar os dois</button> -->
+
         </div>
       </div>
 
@@ -263,6 +267,7 @@
 
 
         <div class="card-body ">
+          <div class="imagem"><img class="imagem" src="{{item.imagem}}" alt=""></div>
           <p class="card-text" aria-describedby="texto"> {{item.text_box}} </p>
           <small id="texto" class="form-text m-0 text-muted mb-3 ">
             Postado em {{item.data_post | date: 'dd/MM/yyyy '}} às {{item.data_post | date: 'HH:mm'}} </small>

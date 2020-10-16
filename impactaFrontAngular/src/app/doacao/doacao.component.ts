@@ -3,6 +3,7 @@ import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
 import { PostagemService } from '../service/postagem.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-doacao',
@@ -25,7 +26,8 @@ export class DoacaoComponent implements OnInit {
 
   constructor(
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alert: AlertasService
   ) { }
 
   ngOnInit(): void {
@@ -68,6 +70,16 @@ export class DoacaoComponent implements OnInit {
     }  
   }
 
+  // findBySangueECidade(){
+  //   if (this.sangue === '' && this.cidade === '') {
+  //     this.findAllPostagens()
+  //     this.alert.showAlertDanger("Preencha todos os campos corretamente")      
+  //   } else {
+  //     this.postagemService.getByCidadePostagem(this.cidade).subscribe((resp: Postagem[]) => {
+  //       this.listaPostagens = resp
+  //     })
+  //   }  
+  // }
   
 
 }
