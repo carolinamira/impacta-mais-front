@@ -19,6 +19,7 @@ export class FeedComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   titulo: string
+  sangue: string
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -108,6 +109,16 @@ export class FeedComponent implements OnInit {
     }  
   }
 
+
+  findBySanguePostagem(){
+    if (this.sangue === '') {
+      this.findAllPostagens()      
+    } else {
+      this.postagemService.getBySanguePostagem(this.sangue).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }  
+  }
 
 
 

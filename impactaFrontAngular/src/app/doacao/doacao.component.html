@@ -18,10 +18,13 @@
 
     <div class="col-md-6 ">
 
+      
+
+
       <div class="row text-center d-flex justify-content-center align-items-center">
         <div class="col-md-6 text-center m-0 ">
           <label class="mt-1" for="tema">Escolha um tipo sanguíneo</label>
-          <select id="tipo-sangue" name="sangue" class="form-control">
+          <select id="tipo-sangue" name="sangue" class="form-control"  [(ngModel)]='sangue'>
             <option value="" disabled selected>Tipo sanguíneo</option>
             <option value="Prefiro não informar">Prefiro não informar</option>
             <option value="A+">A+</option>
@@ -37,7 +40,7 @@
         </div>
       </div>
 
-      <div class="row text-center d-flex justify-content-center align-items-center">
+      <!-- <div class="row text-center d-flex justify-content-center align-items-center">
         <div class="col-md-6 text-center">
           <label class="mt-3" for="tema">Escolha um Estado</label>
           <select id="estado" name="Estado" class="form-control">
@@ -46,7 +49,7 @@
             <option value="Rio de Janeiro">Rio de Janeiro</option>
           </select>
         </div>
-      </div>
+      </div> -->
 
             
 
@@ -54,7 +57,7 @@
       <div class="row text-center d-flex justify-content-center align-items-center">
         <div class="col-md-6 text-center">
           <label class="mt-3" for="tema">Escolha uma Cidade</label>
-          <select id="cidade" name="Cidade" class="form-control">
+          <select id="cidade" name="Cidade" class="form-control" [(ngModel)]='cidade'>
             <option value="" disabled selected>Cidade</option>
             <option value="São Paulo">São Paulo</option>
             <option value="Rio de Janeiro">Rio de Janeiro</option>
@@ -63,10 +66,15 @@
       </div>
 
 
+      <!-- <p>Procure por um tipo sanguineo</p>
+      <input class="form-control w-100" type="search" placeholder="Pesquisar por sangue" aria-label="Pesquisar"
+      [(ngModel)]='sangue'> -->
 
       <div class="row mb-5">
         <div class="col-md-12 d-flex justify-content-center">
-          <button class="btn text-white w-25 mt-4" style="background-color: var(--primary-red);" >Buscar</button>
+          <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findBySanguePostagem()'>Buscar por sangue</button>
+          <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findByCidadePostagem()'>Buscar por cidade</button>
+          <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findAllPostagens()'>Ver todas as postagens</button>
         </div>
       </div>
 

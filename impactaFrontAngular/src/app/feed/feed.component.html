@@ -170,14 +170,22 @@
           aria-labelledby="nav-postagens-tab">
           <div class="row mt-3 mb-3">
             <div class="col-md-10 pr-0">
-              <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar"
+              <input class="form-control w-100" type="search" placeholder="Pesquisar postagem por título" aria-label="Pesquisar"
                 [(ngModel)]='titulo'>
+
+      
+   
+
             </div>
             <div class="col-md-2 pl-0">
               <button class="btn btn-outline-info w-100" type="button"
                 (click)='findByTituloPostagem()'>Pesquisar</button>
             </div>
           </div>
+
+
+          <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findAllPostagens()'>Ver todas as postagens</button>
+
 
           <div class="row ">
             <div class="col-md-12 ">

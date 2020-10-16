@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { LogadoComponent } from './logado/logado.component';
+
 import { FeedComponent } from './feed/feed.component';
 import { DoacaoComponent } from './doacao/doacao.component';
 import { HospitalComponent } from './hospital/hospital.component';
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent},
   { path: 'login', component: LoginComponent},
   { path: 'cadastro', component: CadastroComponent},
-  { path: 'logado', component: LogadoComponent},
+
   { path: 'feed', component: FeedComponent },
   { path: 'doacao', component: DoacaoComponent },
   { path: 'hospital', component: HospitalComponent },

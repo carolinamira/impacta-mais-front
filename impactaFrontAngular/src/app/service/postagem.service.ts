@@ -35,9 +35,13 @@ export class PostagemService {
   getByTituloPostagem(titulo: string) {
     return this.http.get(`http://localhost:8080/postagem/titulo/${titulo}`, this.token)
   }
-  // getBySanguePostagem(sangue: string) {
-  //   return this.http.get(`http://localhost:8080/postagem/sangue/${sangue}`, this.token)
-  // }
+  getBySanguePostagem(sangue: string) {
+    return this.http.get(`http://localhost:8080/postagem/sangue/${sangue}`, this.token)
+  }
+
+  getByCidadePostagem(cidade: string) {
+    return this.http.get(`http://localhost:8080/postagem/cidade/${cidade}`, this.token)
+  }
 
 }
 

@@ -14,7 +14,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
-import { LogadoComponent } from './logado/logado.component';
 import { FeedComponent } from './feed/feed.component';
 import { DoacaoComponent } from './doacao/doacao.component';
 import { HospitalComponent } from './hospital/hospital.component';
@@ -40,7 +39,6 @@ import { PutPerfilComponent } from './put-perfil/put-perfil.component';
     SobreComponent,
     CadastroComponent,
     LoginComponent,
-    LogadoComponent,
     FeedComponent,
     DoacaoComponent,
     HospitalComponent,
