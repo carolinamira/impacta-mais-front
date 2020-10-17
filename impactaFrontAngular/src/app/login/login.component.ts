@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/feed']) 
     }, err => {
       if (err.status == '500' || err.status == '400'  || err.status == '402' ){
-        this.alert.showAlertDanger("Preencha todos os campos corretamente para prosseguir!")
+        this.alert.showAlertDanger("E-mail e/ou senha incorretos.")
       }
 
     })
