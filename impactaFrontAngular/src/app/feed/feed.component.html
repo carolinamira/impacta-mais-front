@@ -108,7 +108,7 @@
                       <label class="" for="tema">Escolha um tipo sanguíneo</label>
                       <select id="tipo-sangue" name="sangue" class="form-control" [(ngModel)]='postagem.sangue'>
                         <option value="" disabled selected>Tipo sanguíneo</option>
-                        <option value="Prefiro não informar">Não se aplica</option>
+                        <option value="Não se aplica">Não se aplica</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
                         <option value="B+">B+</option>
@@ -138,7 +138,7 @@
             </div>
 
             <div class="col-md-12 d-flex justify-content-end ">
-              <button type="button" class="btn btn-outline-info mt-4" (click)='publicar()'>Publicar</button>
+              <button type="button" class="btn botao-pesquisar mt-4" (click)='publicar()'>Publicar</button>
             </div>
 
           </div>
@@ -183,7 +183,7 @@
 
             </div>
             <div class="col-md-2 pl-0">
-              <button class="btn btn-outline-info w-100" type="button"
+              <button class="btn botao-pesquisar w-100" type="button"
                 (click)='findByTituloPostagem()'>Pesquisar</button>
             </div>
           </div>
@@ -297,7 +297,7 @@
                 [(ngModel)]='nomeTema'>
             </div>
             <div class="col-md-2 pl-0">
-              <button class="btn btn-outline-info w-100" type="button" (click)='findByNomeTema()'>Pesquisar</button>
+              <button class="btn botao-pesquisar w-100" type="button" (click)='findByNomeTema()'>Pesquisar</button>
             </div>
           </div>
 

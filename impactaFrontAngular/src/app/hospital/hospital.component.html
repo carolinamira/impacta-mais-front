@@ -144,8 +144,22 @@
             <td class="td"><a href="{{item.link}}" target="_blank" rel="noopener noreferrer">Link Google Maps</a></td>
             <td class="td">Em análise</td>
             <td class="d-flex justify-content-end">
-              <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-hospital', item.id]">Editar</a>
-              <a class="btn btn-outline-danger" [routerLink]="['/delete-hospital', item.id]">Apagar</a>
+              <!-- <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-hospital', item.id]">Editar</a>
+              <a class="btn btn-outline-danger" [routerLink]="['/delete-hospital', item.id]">Apagar</a> -->
+
+              <div>
+
+                <button class=" editar mr-3 btn " [routerLink]="['/editar-hospital', item.id]">
+                  editar
+                </button>
+
+                <button class="apagar mr-3 btn  ml-3" [routerLink]="['/delete-hospital', item.id]">
+                  apagar
+                </button>
+
+              </div>
+
+
             </td>
 
           </tr>
