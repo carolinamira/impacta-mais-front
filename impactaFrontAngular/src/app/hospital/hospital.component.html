@@ -130,7 +130,7 @@
             <th scope="col">Cidade</th>
             <th scope="col">Endereço</th>
             <th scope="col">Google Maps</th>
-            <th scope="col">Em Análise</th>
+            <th scope="col">Status</th>
 
 
           </tr>
@@ -142,7 +142,7 @@
             <td class="td">{{item.cidade}}</td>
             <td class="td">{{item.endereco}}</td>
             <td class="td"><a href="{{item.link}}" target="_blank" rel="noopener noreferrer">Link Google Maps</a></td>
-            <td class="td">{{item.ativo}}</td>
+            <td class="td">Em análise</td>
             <td class="d-flex justify-content-end">
               <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-hospital', item.id]">Editar</a>
               <a class="btn btn-outline-danger" [routerLink]="['/delete-hospital', item.id]">Apagar</a>

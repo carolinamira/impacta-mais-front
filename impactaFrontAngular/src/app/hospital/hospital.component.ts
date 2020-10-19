@@ -50,6 +50,7 @@ export class HospitalComponent implements OnInit {
         this.hospital = new Hospital()
         this.alert.showAlertInfo('Hospital adicionado para análise!')
         this.findAllHospitals()
+        window.scroll(0, 825)
       })
     }
   }

@@ -25,3 +25,94 @@
     width: 100%;
     height: auto;
 }
+
+.editar{
+    color: var(--primary-green);
+    transition: ease 300ms;
+}
+
+.editar:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.apagar{
+    color: var(--primary-red);
+    transition: ease 300ms;
+}
+
+.apagar:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.impacto, .coracao {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 12px ;
+}
+
+#impacto{
+    background-image: url('../../assets/img/seta-white.png');
+}
+
+#impacto:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+#impacto:hover{
+    background-image: url('../../assets/img/seta.png');
+}
+
+
+
+
+#coracao{
+    background-image: url('../../assets/img/coracao-white.png');
+}
+
+#coracao:hover{
+    cursor: pointer;
+    opacity: 0.8;    
+}
+
+#coracao:hover{
+    background-image: url('../../assets/img/coracao.png');
+}
+
+
+
+
+
+
+.impactou-texto{
+    visibility: hidden;
+    text-decoration: none;
+    color: red;
+}
+
+.a-out-icon:hover .impactou-texto{
+    visibility: visible;
+    text-decoration: none;
+
+}
+
+.apoiou-texto{
+    visibility: hidden;
+    color: red;
+    text-decoration: none;
+}
+
+.a-out-icon:hover .apoiou-texto{
+    visibility: visible;
+    text-decoration: none;
+
+}
