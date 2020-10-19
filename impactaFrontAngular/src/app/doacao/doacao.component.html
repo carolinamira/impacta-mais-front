@@ -147,7 +147,7 @@
         <div class="col-md-12 d-flex justify-content-center">
 
           <button class="btn text-white w-25  mx-2" style="background-color: var(--primary-red);"
-            (click)='findAllPostagens()'>Ver todas as postagens</button>
+            (click)='findAllPostagens2()'>Ver todas as postagens</button>
           <!-- <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findBySangueECidade()'>Buscar os dois</button> -->
         </div>
       </div>
@@ -338,6 +338,29 @@
 
         <div class="card-body ">
           <div class="imagem"><img class="imagem" src="{{item.imagem}}" alt=""></div>
+
+
+                  <!-- ICONES -->
+                  <div class="col-5 px-0 d-flex justify-content-start align-items-center mt-3">
+                    
+                    <div class="a-out-icon">
+                    
+                      <div id="impacto" class="impacto ml-2"></div>
+                      <small class="text-dark impactou-texto">impactar</small>
+                  </div>
+
+
+                    <div class="a-out-icon">
+                     
+                      <div id="coracao" class="coracao ml-3"></div>
+                      <small class="ml-3 text-dark apoiou-texto">apoiar</small>
+                    </div>
+                    
+                  </div>
+                  <!-- / ICONES -->
+
+
+
           <p class="card-text" aria-describedby="texto"> {{item.text_box}} </p>
           <small id="texto" class="form-text m-0 text-muted mb-3 ">
             Postado em {{item.data_post | date: 'dd/MM/yyyy '}} às {{item.data_post | date: 'HH:mm'}} </small>

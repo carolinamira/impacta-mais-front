@@ -51,6 +51,13 @@ export class DoacaoComponent implements OnInit {
     })
   }
 
+  findAllPostagens2() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+      window.scroll(0, 600)
+    })
+  }
+
   findAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
