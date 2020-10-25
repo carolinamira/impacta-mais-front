@@ -14,7 +14,7 @@
 O <strong style="color:red;">Impacta+</strong> é uma rede social do bem para quem quer transformar o mundo em um lugar melhor!
 Temos como objetivo reunir iniciativas em diversas áreas, engajar pessoas e gerar impactos positivos na comunidade. 
 
-Este projeto surgiu como resultado de um processo de estudo de 4 integrantes no bootcamp da <a href="https://brazil.generation.org/"><strong>Generation Brasil</strong><a> na <strong>Turma 7</strong>.
+Este projeto surgiu como resultado de um processo de estudo de 4 integrantes no bootcamp da <a href="https://brazil.generation.org/" target="_blank"><strong>Generation Brasil</strong><a> na <strong>Turma 7</strong>.
 
 <a id="tecnologias"></a>
 
