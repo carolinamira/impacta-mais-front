@@ -49,4 +49,4 @@ Versionamento:
 
 <a id="front"></a>
 
-## :computer: Clique <a href="https://github.com/AndrehW27/ImpactaMais">aqui</a> para ver o Back-End!
+## :computer: Clique <a href="https://github.com/AndrehW27/ImpactaMais" target="_blank">aqui</a> para ver o Back-End!
