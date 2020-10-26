@@ -63,14 +63,42 @@
                 <div class="container-fluid w-100 ">
 
                   <div class="row">
-
+<!-- 
                     <div class="col-md-6">
                       <div class="form-group mt-3 ">
                         <label class="text" for="cidade">Cidade:</label>
                         <input type="text" class="form-control" id="cidade" placeholder="Digite aqui sua cidade"
                           [(ngModel)]='postagem.cidade'>
                       </div>
+                    </div> -->
+
+
+
+
+                    <div class="col-md-6">
+                      <div class="row  d-flex justify-content-center align-items-center">
+                        <div class="col-md-12 ">
+                          <label class="mt-3" for="tema">Escolha um Estado</label>
+                          <select id="estado" name="Estado" class="form-control" (change)="estadoSelecionado($event)" >
+                            <option *ngFor="let item of estados" value={{item.id}}>{{item.name}}</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <div class="row  d-flex justify-content-center align-items-center">
+                        <div class="col-md-12 ">
+                          <label class="mt-3" for="tema">Escolha uma Cidade</label>
+                          <select id="cidade" name="Cidade" class="form-control" [(ngModel)]='postagem.cidade'>
+                            <option *ngFor="let item of cidades" value={{item.name}}>{{item.name}}</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
+
+
+
+
 
                     <div class="col-md-6">
                       <div class="form-group mt-3 ">
@@ -163,9 +191,9 @@
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
             href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Postagens</a>
-
+<!-- 
           <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
-            href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por tema</a>
+            href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por tema</a> -->
         </div>
       </nav>
 
@@ -182,14 +210,14 @@
 
 
             </div>
-            <div class="col-md-2 pl-0">
-              <button class="btn botao-pesquisar w-100" type="button"
+            <div class="col-md-2 pl-0 botao-flex">
+              <button class="btn botao-pesquisar " type="button"
                 (click)='findByTituloPostagem()'>Pesquisar</button>
             </div>
           </div>
 
           <div class="text-center">
-            <button class="btn text-white w-25 mt-4 mx-2 " style="background-color: var(--primary-red);"
+            <button class="btn text-white w-50 mt-4 mx-2 " style="background-color: var(--primary-red);"
               (click)='findAllPostagens()'>Ver todas as postagens</button>
           </div>
 
@@ -202,7 +230,7 @@
               <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy: key : reverse'>
                 <div class="card-header">
                   <div class="row d-flex align-items-center 	">
-                    <div class="col-md-12 ">
+                    <div class="col-md-10">
 
                       <h5 class="card-title"> {{item.titulo}} </h5>
 
@@ -213,6 +241,25 @@
                       <small class="mx-3"> <span style="color: var(--primary-red);">{{item.sangue}}</span> </small>
                     </div>
 
+
+
+                    <div class="col-md-2 ">
+
+
+                      <div class=" px-0 d-flex justify-content-end align-items-center mt-3 mb-2">
+
+                        <div class="a-out-icon">
+                          <div id="editou" class="editar-icon " [routerLink]="['/editar-post', item.id]"></div>
+                        </div>
+  
+                        <div class="a-out-icon">
+                          <div id="apagou" class="apagar-icon" [routerLink]="['/delete-post', item.id]"></div>
+                        </div>
+
+  
+                      </div>
+
+                    </div>
 
 
 
@@ -257,7 +304,7 @@
                     class="form-text m-0 text-muted mb-3 d-flex justify-content-between align-items-center">
                     Postado em {{item.data_post | date: 'dd/MM/yyyy '}} às {{item.data_post | date: 'HH:mm'}}
 
-                    <div>
+                    <!-- <div>
 
                       <button class=" editar mr-3 btn " [routerLink]="['/editar-post', item.id]">
                         editar
@@ -267,7 +314,7 @@
                         apagar
                       </button>
 
-                    </div>
+                    </div> -->
 
                   </small>
 

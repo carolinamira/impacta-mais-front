@@ -25,7 +25,7 @@
     width: 100%;
     height: auto;
 }
-
+/* 
 .editar{
     color: var(--primary-green);
     transition: ease 300ms;
@@ -44,7 +44,7 @@
 .apagar:hover{
     opacity: 0.8;
     text-decoration: underline;
-}
+} */
 
 
 
@@ -122,9 +122,71 @@
     border: 1px solid var(--primary-red);
     background-color: white;
     color: var(--primary-red);
+    min-width: 150px;
 }
 
 .botao-pesquisar:hover{
     background-color: var(--primary-red);
     color: white;
+}
+
+
+
+
+
+
+.editar-icon, .apagar-icon {
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px 12px ;
+}
+
+#editou{
+    background-image: url('../../assets/icons/pencil.png');
+}
+
+#editou:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+#editou:hover{
+    background-image: url('../../assets/icons/pencil-green.png');
+}
+
+
+
+
+#apagou{
+    background-image: url('../../assets/icons/trash.png');
+}
+
+#apagou:hover{
+    cursor: pointer;
+    opacity: 0.8;    
+}
+
+#apagou:hover{
+    background-image: url('../../assets/icons/trash-red.png');
+}
+
+
+
+
+
+@media (max-width:770px) {
+
+    .botao-pesquisar{
+        width: 40px ;
+    }
+    .botao-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0px;
+        margin-top: 12px;
+    }
+
 }

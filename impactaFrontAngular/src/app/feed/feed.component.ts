@@ -4,6 +4,7 @@ import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
 import { PostagemService } from '../service/postagem.service';
 import { AlertasService } from '../service/alertas.service';
+import { getAllStates, getAllCities, getStateCities } from "easy-location-br";
 
 
 @Component({
@@ -12,6 +13,9 @@ import { AlertasService } from '../service/alertas.service';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
+  estados = []
+  estadoSelecao: string
+  cidades = []
 
   key = 'date'
   reverse = true
@@ -39,6 +43,8 @@ export class FeedComponent implements OnInit {
 
     this.findAllPostagens()
     this.findAllTemas()
+
+    this.estados = getAllStates()
   }
 
   findAllPostagens() {
@@ -143,6 +149,11 @@ export class FeedComponent implements OnInit {
         this.listaPostagens = resp
       })
     }
+  }
+
+  estadoSelecionado(event:any) {
+    this.estadoSelecao=event.target.value
+    this.cidades = getStateCities(this.estadoSelecao)
   }
 
 

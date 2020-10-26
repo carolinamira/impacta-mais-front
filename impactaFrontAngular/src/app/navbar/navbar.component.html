@@ -1,6 +1,6 @@
 <!-- NAVBAR -->
 
-<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-navbar text-white">
+<nav class="fixed-top navbar navbar-expand-lg navbar-light font18 text-white" style="background-color: var(--primary-green);">
 
   <a routerLink="/home">
     <div class="icon-navbar"></div>
@@ -33,7 +33,7 @@
 
       <div *ngIf='auth.btnSair()'>
         <li class="nav-item active">
-          <a class="nav-link text-white botoes-menu" routerLink="/feed">Feed<span class="sr-only">(current)</span></a>
+          <a class="nav-link text-white botoes-menu feed-resp" routerLink="/feed">Feed<span class="sr-only">(current)</span></a>
         </li>
       </div>
 

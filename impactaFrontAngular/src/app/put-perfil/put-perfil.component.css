@@ -21,12 +21,12 @@
 
 .col-teste1{
    height: 400px;
-    background-image: url('../../assets/img/mauricio.jpg');
+    background-image: url('../../assets/img/profile.png');
     
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 50%;
+    border-radius: 65%;
     box-shadow: 5px 10px 30px #000;
 }
 

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Hospital } from '../model/hospital';
 import { AlertasService } from '../service/alertas.service';
 import { HospitalService } from '../service/hospital.service';
+import { getAllStates, getAllCities, getStateCities } from "easy-location-br";
 
 @Component({
   selector: 'app-put-hospital',
@@ -10,6 +11,9 @@ import { HospitalService } from '../service/hospital.service';
   styleUrls: ['./put-hospital.component.css']
 })
 export class PutHospitalComponent implements OnInit {
+  estados = []
+  estadoSelecao: string
+  cidades = []
 
   hospital: Hospital = new Hospital()
   listaHospitais: Hospital[]
@@ -26,6 +30,8 @@ export class PutHospitalComponent implements OnInit {
     let id: number = this.route.snapshot.params["id"]
     this.findByIdHospital(id)
     window.scroll(0,0)
+
+    this.estados = getAllStates()
   }
 
   salvar() {
@@ -45,5 +51,12 @@ export class PutHospitalComponent implements OnInit {
   btnCancelar(){
     this.router.navigate(['/hospital'])
   }
+
+  estadoSelecionado(event:any) {
+    this.estadoSelecao=event.target.value
+    this.cidades = getStateCities(this.estadoSelecao)
+  }
+
+
   
 }

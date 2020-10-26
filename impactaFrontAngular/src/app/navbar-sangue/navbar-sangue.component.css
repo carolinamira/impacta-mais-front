@@ -5,6 +5,10 @@
     font-size: 18px;
 }
 
+.font18{
+    font-size: 18px;
+}
+
 .botoes-menu{
     margin: 0px 8px;
 }
@@ -88,4 +92,21 @@
     
     padding: 0px 12px;
     
+}
+
+
+@media (max-width:770px) {
+
+    .botao-sair{
+   
+        right: 130px;
+    }
+    .botao-perfil{
+      
+        right: 190px;
+    }
+    .feed-resp{
+        margin-top: 20px;
+    }
+
 }
