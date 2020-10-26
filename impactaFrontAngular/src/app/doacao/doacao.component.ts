@@ -39,7 +39,7 @@ export class DoacaoComponent implements OnInit {
     window.scroll(0, 0)
 
     this.findAllPostagens()
-    this.findAllTemas()
+    // this.findAllTemas()
 
     this.estados = getAllStates()
   }
@@ -91,16 +91,10 @@ export class DoacaoComponent implements OnInit {
     this.cidades = getStateCities(this.estadoSelecao)
   }
 
-  // findBySangueECidade(){
-  //   if (this.sangue === '' && this.cidade === '') {
-  //     this.findAllPostagens()
-  //     this.alert.showAlertDanger("Preencha todos os campos corretamente")      
-  //   } else {
-  //     this.postagemService.getByCidadePostagem(this.cidade).subscribe((resp: Postagem[]) => {
-  //       this.listaPostagens = resp
-  //     })
-  //   }  
+  // FindPostagemPedidos(){
+  //   this.postagemService.getPedidos().subscribe((resp: Postagem[]) => {
+  //     this.listaPostagens = resp
+  //   })
   // }
-  
 
 }

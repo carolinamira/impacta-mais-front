@@ -32,5 +32,12 @@ export class HospitalService {
     return this.http.delete(`http://localhost:8080/hospitais/${id}`, this.token)
   }
 
+  getByCidadeHospital(cidade: string) {
+    return this.http.get(`http://localhost:8080/hospitais/cidade/${cidade}`, this.token)
+    // return this.http.get(`https://impacta-mais.herokuapp.com/hospitais/cidade/${cidade}`, this.token)
+
+  }
+
+
 }
 

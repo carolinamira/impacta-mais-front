@@ -7,6 +7,10 @@ hr{
     max-width: 150px;
     overflow-x: hidden;
 }
+
+.gambs{
+    overflow-x: hidden;
+}
 .imagem{
     width: 100%;
     height: auto;

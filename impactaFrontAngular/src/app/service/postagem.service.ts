@@ -32,6 +32,7 @@ export class PostagemService {
   deletePostagem(id: number) {
     return this.http.delete(`http://localhost:8080/postagem/${id}`, this.token)
   }
+
   getByTituloPostagem(titulo: string) {
     return this.http.get(`http://localhost:8080/postagem/titulo/${titulo}`, this.token)
   }
@@ -42,6 +43,10 @@ export class PostagemService {
   getByCidadePostagem(cidade: string) {
     return this.http.get(`http://localhost:8080/postagem/cidade/${cidade}`, this.token)
   }
+
+  // getPedidos(id: tema) {
+  //   return this.http.get(`http://localhost:8080/postagem/tema/${id}`, this.token)
+  // }
 
 }
 

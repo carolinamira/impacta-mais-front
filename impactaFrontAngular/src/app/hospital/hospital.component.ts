@@ -18,6 +18,8 @@ export class HospitalComponent implements OnInit {
 
   hospital: Hospital = new Hospital()
   listaHospitais: Hospital[]
+  cidade: string
+  nome: string
 
   constructor(
     private hospitalService: HospitalService,
@@ -40,6 +42,16 @@ export class HospitalComponent implements OnInit {
     })
   }
 
+  findAllHospitalsBotao() {
+    this.hospitalService.getAllHospitals().subscribe((resp: Hospital[]) => {
+      this.listaHospitais = resp
+      window.scroll(0, 450)
+    })
+  }
+
+
+
+
   findByIdHospital() {
     this.hospitalService.getByIdHospital(this.hospital.id).subscribe((resp: Hospital) => {
       this.hospital = resp
@@ -60,6 +72,23 @@ export class HospitalComponent implements OnInit {
       })
     }
   }
+
+
+  findByCidadeHospital(){
+    if (this.cidade === '') {
+      this.findAllHospitals()   
+      this.alert.showAlertInfo('Cidade não encontrada, veja a lista de todos os hospitais') 
+      window.scroll(0, 900)    
+    } else {
+      this.hospitalService.getByCidadeHospital(this.cidade).subscribe((resp: Hospital[]) => {
+        this.listaHospitais = resp
+        window.scroll(0, 900)
+      })
+    }  
+  }
+
+
+
 
   estadoSelecionado(event:any) {
     this.estadoSelecao=event.target.value

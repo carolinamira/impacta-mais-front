@@ -1,119 +1,121 @@
-<!--navbar vermelho-->
-<app-navbar-sangue></app-navbar-sangue>
-<!-- /navbar vermelho-->
+<div class="gambs">
 
-<div class="jumbotron jumbotron-fluid mt-5 mb-0 py-4 ">
-  <div class="container">
-    <h3 class=" text-center my-3">Doe para um usuário</h3>
-    <p style="font-size: 16px;" class="lead text-justify text-center">Selecione as informações nos campos abaixo para
-      encontrar pedidos de doação que correspondam ao seu tipo sanguíneo e localização:.</p>
+  <!--navbar vermelho-->
+  <app-navbar-sangue></app-navbar-sangue>
+  <!-- /navbar vermelho-->
+
+  <div class="jumbotron jumbotron-fluid mt-5 mb-0 py-4 ">
+    <div class="container">
+      <h3 class=" text-center my-3">Doe para um usuário</h3>
+      <p style="font-size: 16px;" class="lead text-justify text-center">Selecione as informações nos campos abaixo para
+        encontrar pedidos de doação que correspondam ao seu tipo sanguíneo e localização:.</p>
+    </div>
   </div>
-</div>
 
 
-<!-- CONTAINER 1 -->
+  <!-- CONTAINER 1 -->
 
-<div class="container container-hospital mt-3">
-  <div class="row d-flex justify-content-center align-items-center">
+  <div class="container container-hospital mt-3">
+    <div class="row d-flex justify-content-center align-items-center">
 
-    <div class="col-md-6 ">
-
-
-      <!-- COLLAPSE 1-->
-
-      <p class="text-center">
-        <a class="btn text-white w-75" style="background-color: var(--primary-red);display: inline-block;"
-          data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-          aria-controls="collapseExample ">
-          Busque pedidos de doação por cidade
-        </a>
-
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body mb-3 ">
+      <div class="col-md-6 ">
 
 
-          <div class="row text-center d-flex justify-content-center align-items-center">
-            <div class="col-md-6 text-center">
-              <label class="mt-3" for="tema">Escolha um Estado</label>
-              <select id="estado" name="Estado" class="form-control" (change)="estadoSelecionado($event)">
-                <option *ngFor="let item of estados" value={{item.id}}>{{item.name}}</option>
-              </select>
+        <!-- COLLAPSE 1-->
+
+        <p class="text-center">
+          <a class="btn text-white w-75" style="background-color: var(--primary-red);display: inline-block;"
+            data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample ">
+            Busque pedidos de doação por cidade
+          </a>
+
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body mb-3 ">
+
+
+            <div class="row text-center d-flex justify-content-center align-items-center">
+              <div class="col-md-6 text-center">
+                <label class="mt-3" for="tema">Escolha um Estado</label>
+                <select id="estado" name="Estado" class="form-control" (change)="estadoSelecionado($event)">
+                  <option *ngFor="let item of estados" value={{item.id}}>{{item.name}}</option>
+                </select>
+              </div>
             </div>
-          </div>
 
 
-          <div class="row text-center d-flex justify-content-center align-items-center">
-            <div class="col-md-6 text-center">
-              <label class="mt-3" for="tema">Escolha uma Cidade</label>
-              <select id="cidade" name="Cidade" class="form-control" [(ngModel)]='cidade'>
-                <option *ngFor="let item of cidades" value={{item.name}}>{{item.name}}</option>
-              </select>
+            <div class="row text-center d-flex justify-content-center align-items-center">
+              <div class="col-md-6 text-center">
+                <label class="mt-3" for="tema">Escolha uma Cidade</label>
+                <select id="cidade" name="Cidade" class="form-control" [(ngModel)]='cidade'>
+                  <option *ngFor="let item of cidades" value={{item.name}}>{{item.name}}</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          <div class="row text-center d-flex justify-content-center align-items-center">
-            <button class="btn botao-pesquisar w-50 mt-4 mx-2 text-center" 
-            (click)='findByCidadePostagem()'>Buscar por cidade</button>
-          </div>
+            <div class="row text-center d-flex justify-content-center align-items-center">
+              <button class="btn botao-pesquisar w-50 mt-4 mx-2 text-center" (click)='findByCidadePostagem()'>Buscar por
+                cidade</button>
+            </div>
 
+          </div>
         </div>
-      </div>
 
-      <!-- COLLAPSE 1 -->
+        <!-- COLLAPSE 1 -->
 
-      <!-- COLLAPSE 2 -->
+        <!-- COLLAPSE 2 -->
 
-      <p class="text-center">
-        <a class="btn text-white w-75" style="background-color: var(--primary-red);display: inline-block;"
-          data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
-          aria-controls="collapseExample ">
-          Busque pedidos de doação por sangue
-        </a>
+        <p class="text-center">
+          <a class="btn text-white w-75" style="background-color: var(--primary-red);display: inline-block;"
+            data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
+            aria-controls="collapseExample ">
+            Busque pedidos de doação por sangue
+          </a>
 
-      </p>
-      <div class="collapse" id="collapseExample2">
-        <div class="card card-body mb-3">
+        </p>
+        <div class="collapse" id="collapseExample2">
+          <div class="card card-body mb-3">
 
 
-          <div class="row text-center d-flex justify-content-center align-items-center">
-            <div class="col-md-6 text-center m-0 ">
-              <label class="mt-1" for="tema">Escolha um tipo sanguíneo</label>
-              <select id="tipo-sangue" name="sangue" class="form-control" [(ngModel)]='sangue'>
-                <option value="" disabled selected>Tipo sanguíneo</option>
-                <option value="Prefiro não informar">Prefiro não informar</option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-                <option value="RH nulo">RH nulo</option>
-              </select>
+            <div class="row text-center d-flex justify-content-center align-items-center">
+              <div class="col-md-6 text-center m-0 ">
+                <label class="mt-1" for="tema">Escolha um tipo sanguíneo</label>
+                <select id="tipo-sangue" name="sangue" class="form-control" [(ngModel)]='sangue'>
+                  <option value="" disabled selected>Tipo sanguíneo</option>
+                  <option value="Prefiro não informar">Prefiro não informar</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="RH nulo">RH nulo</option>
+                </select>
+              </div>
             </div>
+
+
+
+
+            <div class="row text-center d-flex justify-content-center align-items-center">
+              <button class="btn botao-pesquisar w-50 mt-4 mx-2" (click)='findBySanguePostagem()'>Buscar por
+                sangue</button>
+            </div>
+
+
           </div>
-
-
-
-
-          <div class="row text-center d-flex justify-content-center align-items-center">
-            <button class="btn botao-pesquisar w-50 mt-4 mx-2" 
-            (click)='findBySanguePostagem()'>Buscar por sangue</button>
-          </div>
-
-
         </div>
-      </div>
 
-      <!-- COLLAPSE 2 -->
-
+        <!-- COLLAPSE 2 -->
 
 
 
 
-      <!-- <div class="row text-center d-flex justify-content-center align-items-center">
+
+        <!-- <div class="row text-center d-flex justify-content-center align-items-center">
         <div class="col-md-6 text-center">
           <label class="mt-3" for="tema">Escolha um Estado</label>
           <select id="estado" name="Estado" class="form-control">
@@ -139,240 +141,244 @@
       </div> -->
 
 
-      <!-- <p>Procure por um tipo sanguineo</p>
+        <!-- <p>Procure por um tipo sanguineo</p>
       <input class="form-control w-100" type="search" placeholder="Pesquisar por sangue" aria-label="Pesquisar"
       [(ngModel)]='sangue'> -->
 
 
 
 
-    </div>
-  </div>
-</div>
-
-<!-- CONTAINER 1 -->
-
-
-
-
-<!-- CONTAINER 2 -->
-
-<div class="jumbotron jumbotron-fluid  mb-0 py-4 ">
-  <div class="container">
-    <h3 class=" text-center my-3">Pedidos de doação</h3>
-    <p style="font-size: 16px;" class="lead text-justify  text-center">Encontramos os seguintes pedidos com as
-      informações correspondentes ao seu
-      tipo sanguíneo e localização:</p>
-  </div>
-</div>
-
-
-
-<!-- COLLAPSE -->
-
-<p class="text-center my-5">
-  <a class="btn text-white w-25" style="background-color: var(--primary-red);display: inline-block;"
-    data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Informações gerais e requisitos
-  </a>
-
-</p>
-<div class="collapse" id="collapseExample3">
-  <div class="card card-body">
-
-
-    <!-- CARDS -->
-    <div class="card-deck">
-      <div class="card">
-        <img src="../../assets/img/13.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">1) Condições básicas para doação</h5>
-
-          <ul>
-            <li class="ml-5">Sentir-se bem, com saúde. </li>
-            <li class="ml-5">Apresentar documento com foto, emitido por órgão oficial e válido em todo o território
-              nacional. </li>
-            <li class="ml-5">Ter peso acima de 50kg.</li>
-            <li class="ml-5">Ter entre 16 e 69 anos; a primeira doação deve ter acontecido até os 60 anos. Menores de 18
-              anos necessitam de autorização por escrito do responsável legal. </li>
-
-          </ul>
-
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../assets/img/14.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">2) Quem não pode doar </h5>
-
-          <ul>
-            <li class="ml-5">Quem teve diagnóstico de hepatite após os 11 anos de idade. </li>
-            <li class="ml-5">Mulheres grávidas ou que estejam amamentando. </li>
-            <li class="ml-5">Pessoas que estão expostas a doenças transmissíveis pelo sangue como AIDS/HIV, Hepatite,
-              Sífilis e Doença de Chagas.</li>
-            <p class="mt-2 text-justify"> *Como critério para a seleção dos doadores, no dia da doação os antecedentes e
-              o estado atual do candidato a doador serão avaliados para determinar se a coleta pode ser realizada sem
-              causar prejuízo à saúde do doador e/ou risco aos receptores.</p>
-
-          </ul>
-
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../assets/img/15.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">3) No dia da doação</h5>
-
-          <ul>
-            <li class="ml-5"> Nunca doar sangue em jejum. </li>
-            <li class="ml-5">Fazer um repouso mínimo de 6 horas na noite anterior à doação. </li>
-            <li class="ml-5">Não ingerir bebidas alcoólicas nas 12 horas anteriores à doação. </li>
-            <li class="ml-5"> Evitar fumar por pelo menos duas horas antes e depois da doação. </li>
-            <li class="ml-5">Evitar ingerir alimentos gordurosos. </li>
-
-          </ul>
-
-
-        </div>
       </div>
     </div>
+  </div>
+
+  <!-- CONTAINER 1 -->
 
 
 
-    <div class="card-deck mt-4">
-      <div class="card">
-        <img src="../../assets/img/16.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">4) O que acontece com o sangue doado? </h5>
 
-          <p class="mt-2 text-justify"> O sangue doado é separado em diferentes componentes como hemácias, plaquetas,
-            plasma e outros, e assim poderá beneficiar mais de um paciente com apenas uma unidade coletada.</p>
-          <p class="mt-2 text-justify"> Os componentes são utilizados para atendimentos de urgência, a realização de
-            cirurgias eletivas de grande porte e o tratamento de pessoas com doenças crônicas e doenças oncológicas
-            variadas que necessitam de transfusão frequentemente. </p>
+  <!-- CONTAINER 2 -->
 
-
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../assets/img/17.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">5) Intervalo entre doações</h5>
-
-          <ul>
-            <li class="ml-5">Homens - a cada 2 meses, no máximo 4 doações ao ano. </li>
-            <li class="ml-5">Mulheres - a cada 3 meses, no máximo 3 doações ao ano. </li>
-
-
-          </ul>
-
-
-        </div>
-      </div>
-      <div class="card">
-        <img src="../../assets/img/18.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">6)Impedimentos definitivos para doação</h5>
-
-          <ul>
-            <li class="ml-5">Hepatite após os 11 anos de idade.</li>
-            <li class="ml-5">Evidência clínica ou laboratorial das seguintes doenças infecciosas transmissíveis pelo
-              sangue: Hepatites B e C, AIDS (vírus HIV), doenças associadas aos vírus HTLV I e II e Doença de Chagas.
-            </li>
-            <li class="ml-5">Uso de drogas ilícitas injetáveis.</li>
-            <li class="ml-5">Malária.</li>
-            <li class="ml-5">Mal de Parkinson.</li>
-
-          </ul>
-
-        </div>
-      </div>
+  <div class="jumbotron jumbotron-fluid  mb-0 py-4 ">
+    <div class="container">
+      <h3 class=" text-center my-3">Pedidos de doação</h3>
+      <p style="font-size: 16px;" class="lead text-justify  text-center">Encontramos os seguintes pedidos com as
+        informações correspondentes ao seu
+        tipo sanguíneo e localização:</p>
     </div>
-
-
-    <!-- / CARDS -->
-
-
-
-
-
   </div>
-</div>
-
-<!-- / COLLAPSE -->
-
-
-<div class="row ">
-  <div class="col-md-12 d-flex justify-content-center">
-
-    <button class="btn text-white w-25 mx-2" style="background-color: var(--primary-red);"
-      (click)='findAllPostagens2()'>Ver todas as postagens</button>
-    <!-- <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findBySangueECidade()'>Buscar os dois</button> -->
-  </div>
-</div>
 
 
 
+  <!-- COLLAPSE -->
+
+  <p class="text-center my-5">
+    <a class="btn text-white w-25" style="background-color: var(--primary-red);display: inline-block;"
+      data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      Informações gerais e requisitos
+    </a>
+
+  </p>
+  <div class="collapse" id="collapseExample3">
+    <div class="card card-body">
 
 
-<div class="container  mb-5 ">
-  <div class="row d-flex justify-content-center align-items-center mb-5">
-    <div class=" col-md-8 mb-5">
+      <!-- CARDS -->
+      <div class="card-deck">
+        <div class="card">
+          <img src="../../assets/img/13.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">1) Condições básicas para doação</h5>
 
-      <div class="card mt-5" *ngFor='let item of listaPostagens '>
-        <div class="card-header">
-          <div class="row d-flex align-items-center 	">
-            <div class="col-md-12 ">
-              <h5 class="card-title"> {{item.titulo}} </h5>
-              <small class="mr-3">{{item.tema.descricao}}</small>
-              <small class="mx-3">{{item.cidade}}</small>
-              <small class="mx-3">{{item.nome_hospital}}</small>
-              <small class="mx-3"> <span style="color: var(--primary-red);">{{item.sangue}}</span> </small>
-            </div>
+            <ul>
+              <li class="ml-5">Sentir-se bem, com saúde. </li>
+              <li class="ml-5">Apresentar documento com foto, emitido por órgão oficial e válido em todo o território
+                nacional. </li>
+              <li class="ml-5">Ter peso acima de 50kg.</li>
+              <li class="ml-5">Ter entre 16 e 69 anos; a primeira doação deve ter acontecido até os 60 anos. Menores de
+                18
+                anos necessitam de autorização por escrito do responsável legal. </li>
+
+            </ul>
 
           </div>
         </div>
+        <div class="card">
+          <img src="../../assets/img/14.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">2) Quem não pode doar </h5>
 
+            <ul>
+              <li class="ml-5">Quem teve diagnóstico de hepatite após os 11 anos de idade. </li>
+              <li class="ml-5">Mulheres grávidas ou que estejam amamentando. </li>
+              <li class="ml-5">Pessoas que estão expostas a doenças transmissíveis pelo sangue como AIDS/HIV, Hepatite,
+                Sífilis e Doença de Chagas.</li>
+              <p class="mt-2 text-justify"> *Como critério para a seleção dos doadores, no dia da doação os antecedentes
+                e
+                o estado atual do candidato a doador serão avaliados para determinar se a coleta pode ser realizada sem
+                causar prejuízo à saúde do doador e/ou risco aos receptores.</p>
 
-        <div class="card-body ">
-          <div class="imagem"><img class="imagem" src="{{item.imagem}}" alt=""></div>
+            </ul>
 
-
-                  <!-- ICONES -->
-                  <div class="col-5 px-0 d-flex justify-content-start align-items-center mt-3">
-                    
-                    <div class="a-out-icon">
-                    
-                      <div id="impacto" class="impacto ml-2"></div>
-                      <small class="text-dark impactou-texto">impactar</small>
-                  </div>
-
-
-                    <div class="a-out-icon">
-                     
-                      <div id="coracao" class="coracao ml-3"></div>
-                      <small class="ml-3 text-dark apoiou-texto">apoiar</small>
-                    </div>
-                    
-                  </div>
-                  <!-- / ICONES -->
-
-
-
-          <p class="card-text" aria-describedby="texto"> {{item.text_box}} </p>
-          <small id="texto" class="form-text m-0 text-muted mb-3 ">
-            Postado em {{item.data_post | date: 'dd/MM/yyyy '}} às {{item.data_post | date: 'HH:mm'}} </small>
+          </div>
         </div>
+        <div class="card">
+          <img src="../../assets/img/15.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">3) No dia da doação</h5>
 
+            <ul>
+              <li class="ml-5"> Nunca doar sangue em jejum. </li>
+              <li class="ml-5">Fazer um repouso mínimo de 6 horas na noite anterior à doação. </li>
+              <li class="ml-5">Não ingerir bebidas alcoólicas nas 12 horas anteriores à doação. </li>
+              <li class="ml-5"> Evitar fumar por pelo menos duas horas antes e depois da doação. </li>
+              <li class="ml-5">Evitar ingerir alimentos gordurosos. </li>
+
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card-deck mt-4">
+        <div class="card">
+          <img src="../../assets/img/16.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">4) O que acontece com o sangue doado? </h5>
+
+            <p class="mt-2 text-justify"> O sangue doado é separado em diferentes componentes como hemácias, plaquetas,
+              plasma e outros, e assim poderá beneficiar mais de um paciente com apenas uma unidade coletada.</p>
+            <p class="mt-2 text-justify"> Os componentes são utilizados para atendimentos de urgência, a realização de
+              cirurgias eletivas de grande porte e o tratamento de pessoas com doenças crônicas e doenças oncológicas
+              variadas que necessitam de transfusão frequentemente. </p>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../assets/img/17.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">5) Intervalo entre doações</h5>
+
+            <ul>
+              <li class="ml-5">Homens - a cada 2 meses, no máximo 4 doações ao ano. </li>
+              <li class="ml-5">Mulheres - a cada 3 meses, no máximo 3 doações ao ano. </li>
+
+
+            </ul>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../assets/img/18.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">6)Impedimentos definitivos para doação</h5>
+
+            <ul>
+              <li class="ml-5">Hepatite após os 11 anos de idade.</li>
+              <li class="ml-5">Evidência clínica ou laboratorial das seguintes doenças infecciosas transmissíveis pelo
+                sangue: Hepatites B e C, AIDS (vírus HIV), doenças associadas aos vírus HTLV I e II e Doença de Chagas.
+              </li>
+              <li class="ml-5">Uso de drogas ilícitas injetáveis.</li>
+              <li class="ml-5">Malária.</li>
+              <li class="ml-5">Mal de Parkinson.</li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- / CARDS -->
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- / COLLAPSE -->
+
+
+  <div class="row ">
+    <div class="col-md-12 d-flex justify-content-center">
+
+      <button class="btn text-white w-25 mx-2" style="background-color: var(--primary-red);"
+        (click)='findAllPostagens2()'>Ver todas as postagens</button>
+      <!-- <button class="btn text-white w-25 mt-4 mx-2" style="background-color: var(--primary-red);" (click)='findBySangueECidade()'>Buscar os dois</button> -->
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container  mb-5 ">
+    <div class="row d-flex justify-content-center align-items-center mb-5">
+      <div class=" col-md-8 mb-5">
+
+        <div class="card mt-5" *ngFor='let item of listaPostagens '>
+          <div class="card-header">
+            <div class="row d-flex align-items-center 	">
+              <div class="col-md-12 ">
+                <h5 class="card-title"> {{item.titulo}} </h5>
+                <small class="mr-3">{{item.tema.descricao}}</small>
+                <small class="mx-3">{{item.cidade}}</small>
+                <small class="mx-3">{{item.nome_hospital}}</small>
+                <small class="mx-3"> <span style="color: var(--primary-red);">{{item.sangue}}</span> </small>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="card-body ">
+            <div class="imagem"><img class="imagem" src="{{item.imagem}}" alt=""></div>
+
+
+            <!-- ICONES -->
+            <div class="col-5 px-0 d-flex justify-content-start align-items-center mt-3">
+
+              <div class="a-out-icon">
+
+                <div id="impacto" class="impacto ml-2"></div>
+                <small class="text-dark impactou-texto">impactar</small>
+              </div>
+
+
+              <div class="a-out-icon">
+
+                <div id="coracao" class="coracao ml-3"></div>
+                <small class="ml-3 text-dark apoiou-texto">apoiar</small>
+              </div>
+
+            </div>
+            <!-- / ICONES -->
+
+
+
+            <p class="card-text" aria-describedby="texto"> {{item.text_box}} </p>
+            <small id="texto" class="form-text m-0 text-muted mb-3 ">
+              Postado em {{item.data_post | date: 'dd/MM/yyyy '}} às {{item.data_post | date: 'HH:mm'}} </small>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
+
+
+  <!-- CONTAINER 2 -->
+
+
+  <!--footer vermelho-->
+  <app-footer-sangue></app-footer-sangue>
+  <!--/footer vermelho-->
 </div>
-
-
-<!-- CONTAINER 2 -->
-
-
-<!--footer vermelho-->
-<app-footer-sangue></app-footer-sangue>
-<!--/footer vermelho-->

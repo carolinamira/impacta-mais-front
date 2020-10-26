@@ -17,6 +17,10 @@ hr{
     overflow-x: hidden;
 }
 
+.gambs{
+    overflow-x: hidden;
+}
+
 .tabela{
     overflow-x: scroll;
 }
