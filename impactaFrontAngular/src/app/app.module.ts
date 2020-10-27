@@ -28,6 +28,8 @@ import { FooterSangueComponent } from './footer-sangue/footer-sangue.component';
 import { ParceirosComponent } from './parceiros/parceiros.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PutPerfilComponent } from './put-perfil/put-perfil.component';
+import { CadastroTemaComponent } from './cadastro-tema/cadastro-tema.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { PutPerfilComponent } from './put-perfil/put-perfil.component';
     FooterSangueComponent,
     ParceirosComponent,
     PerfilComponent,
-    PutPerfilComponent
+    PutPerfilComponent,
+    CadastroTemaComponent,
+    DeleteTemaComponent
   ],
   imports: [
     BrowserModule,

@@ -116,13 +116,15 @@
                   <div class="row">
 
                     <div class="col-md-6">
-                      <label class="" for="tema">Escolha um tema
+                      <label class="" for="tema">Escolha um tema 
 
 
                         <!-- RETIRADO A OPCAO DE INSERIR NOVO TEMA, POIS A REGRA DE NEGOCIO DEFINE QUE O USUARIO NAO PODE CADASTRAR UM NOVO TEMA. TEMAS: ID1: Ajudei, ID2: Info, ID3: Pedido-->
 
                         <!-- <a routerLink="/cadastro-tema">Cadastre um
                       novo</a> -->
+
+
                       </label>
                       <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
                         <option value="" disabled selected>Tema</option>
